@@ -8,7 +8,7 @@ inherit linux-info meson python-any-r1 readme.gentoo-r1 toolchain-funcs udev use
 
 DESCRIPTION="A set of co-operative tools that make networking simple and straightforward"
 HOMEPAGE="https://wiki.gnome.org/Projects/NetworkManager"
-SRC_URI="https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/archive/1.48.4/NetworkManager-1.48.4.tar.bz2 -> NetworkManager-1.48.4.tar.bz2"
+SRC_URI="https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/archive/1.48.6/NetworkManager-1.48.6.tar.bz2 -> NetworkManager-1.48.6.tar.bz2"
 
 LICENSE="GPL-2+ LGPL-2.1+"
 SLOT="0"
