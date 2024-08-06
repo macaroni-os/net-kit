@@ -980,7 +980,7 @@ go-module_set_globals
 
 KEYWORDS="*"
 SRC_URI="https://github.com/rclone/rclone/tarball/bf257261b8568b8d086245211cce000b9f0fb367 -> rclone-1.67.0-bf25726.tar.gz
-https://distfiles.macaronios.org/72/21/dd/7221ddc4bf1db127c63501342e90fe46f65e4b1143de42d17a608551c648f8d713c09c670fc8ce23737ed03d0650928a8da8888300e986f38fa82196353b9394 -> rclone-1.67.0-funtoo-go-bundle-e1dec3ac0a9dcdb5c93faa8f961efea9dc41ee4835a4e4896b857cd3a88ad2e724f7ca8ac0fbd956b594dab407c5ddd052cecb425f48fb62d151e9938254ae02.tar.gz"
+https://distfiles.macaronios.org/ab/24/07/ab24079d8b61134e9bb5bb090c84eed2340bcda56963c7ee1de719049dc39c3783ca63b44541ccc5c4338198a1bbe4212d5f891c93d5e723289373f9abb95640 -> rclone-1.67.0-funtoo-go-bundle-e1dec3ac0a9dcdb5c93faa8f961efea9dc41ee4835a4e4896b857cd3a88ad2e724f7ca8ac0fbd956b594dab407c5ddd052cecb425f48fb62d151e9938254ae02.tar.gz"
 
 DESCRIPTION="A program to sync files to and from various cloud storage providers"
 HOMEPAGE="https://rclone.org/"

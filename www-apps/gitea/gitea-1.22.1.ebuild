@@ -8,7 +8,7 @@ DESCRIPTION="A painless self-hosted Git service"
 HOMEPAGE="https://gitea.com https://github.com/go-gitea/gitea"
 
 SRC_URI="https://github.com/go-gitea/gitea/releases/download/v1.22.1/gitea-src-1.22.1.tar.gz -> gitea-src-1.22.1.tar.gz
-https://distfiles.macaronios.org/12/e6/8f/12e68fe534e3bfad72aba5d7ac47137cf6a0f70e9c4924d04c1525e415e938a273f764eff1306e0c95210df802a6623d9adedaf823bed46d30f17b77ed7a485c -> gitea-1.22.1-funtoo-go-bundle-5239a77537dbf8e3733138fdf78bd10a6fec9d74ef083b406cdc26b72e08d3377e469afeb6665a191c546a03a7ab64b6105adf68a5bc3429c3f9fa6924a29f04.tar.gz"
+https://distfiles.macaronios.org/61/39/ff/6139ffe60198729f89f3271f6a060de254106686ddbf30d14c094e44134b2a98633a0c52c767024d4bc326fb8b7c4ceb89b920306df9137e26932901fcaaf6d7 -> gitea-1.22.1-funtoo-go-bundle-5239a77537dbf8e3733138fdf78bd10a6fec9d74ef083b406cdc26b72e08d3377e469afeb6665a191c546a03a7ab64b6105adf68a5bc3429c3f9fa6924a29f04.tar.gz"
 KEYWORDS="*"
 IUSE="systemd"
 
