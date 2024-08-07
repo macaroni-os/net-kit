@@ -381,7 +381,7 @@ DESCRIPTION="Fast tool to manage MinIO clusters"
 HOMEPAGE="https://min.io/ https://github.com/minio/mc"
 SRC_URI="
 https://api.github.com/repos/minio/mc/tarball/RELEASE.2024-07-31T15-58-33Z -> minio-client-RELEASE.2024-07-31T15-58-33Z.tar.gz
-https://distfiles.macaronios.org/ea/b8/f0/eab8f0528cc09c8b8654c46af51d9850c455c8206c5cbd97fc733d1c2b695c536d624b6c0628f21378f0b4db597ee8ac996e470a862037401014baab9858a037 -> minio-client-2024.07.31.15.58.33-funtoo-go-bundle-06fa4631d8116bddf03ebda28536928547a95da503a38cec4086dee1b6e38ebe70a51307aac43fd28930f74a3f87ceb2fbcff034a183e03b882ac0b910576463.tar.gz"
+https://distfiles.macaronios.org/61/fb/cf/61fbcfb27e26595febd917ca25e76f2eb2f06b1bd6a56bf766fd2f38bc9c164d27e39880c093a998909bc298700cc2b27f9c966d2140e67d1f7b651361661e7d -> minio-client-2024.07.31.15.58.33-funtoo-go-bundle-06fa4631d8116bddf03ebda28536928547a95da503a38cec4086dee1b6e38ebe70a51307aac43fd28930f74a3f87ceb2fbcff034a183e03b882ac0b910576463.tar.gz"
 
 MY_PV="$(ver_cut 1-3)T$(ver_cut 4-7)Z"
 MY_PV=${MY_PV//./-}
