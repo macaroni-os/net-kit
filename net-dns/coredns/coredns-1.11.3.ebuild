@@ -22,6 +22,7 @@ S="${WORKDIR}/coredns-coredns-a7ed346"
 
 src_compile() {
 	FORCE_HOST_GO=yes
+	echo "$(go env GOVERSION | sed 's/go//g')" > .go-version
 	emake
 }
 
