@@ -9,7 +9,7 @@ MY_PN="${PN/-bin/}"
 
 DESCRIPTION="A feature-rich client for Matrix.org"
 HOMEPAGE="https://element.io"
-SRC_URI="https://packages.element.io/debian/pool/main/e/element-desktop/element-desktop_1.11.73_amd64.deb -> element-desktop_1.11.73_amd64.deb"
+SRC_URI="https://packages.element.io/debian/pool/main/e/element-desktop/element-desktop_1.11.74_amd64.deb -> element-desktop_1.11.74_amd64.deb"
 
 LICENSE="Apache-2.0"
 SLOT="0"
