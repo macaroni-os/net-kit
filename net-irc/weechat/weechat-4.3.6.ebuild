@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python3+ )
 
 inherit cmake python-single-r1 xdg-utils
 
-SRC_URI="https://weechat.org/files/src/weechat-4.3.5.tar.gz -> weechat-4.3.5.tar.gz"
+SRC_URI="https://weechat.org/files/src/weechat-4.3.6.tar.gz -> weechat-4.3.6.tar.gz"
 KEYWORDS="*"
 
 DESCRIPTION="Portable and multi-interface IRC client"
