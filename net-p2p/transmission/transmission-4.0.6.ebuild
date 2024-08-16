@@ -6,7 +6,7 @@ inherit cmake user xdg-utils
 
 DESCRIPTION="A fast, easy, and free BitTorrent client"
 HOMEPAGE="https://transmissionbt.com/"
-SRC_URI="https://distfiles.macaronios.org/59/41/32/594132dd2d3af4fd2eb3cce1123f3a12f165655556926baa80f898ef417fa85d627347ed11d72aa015439a76b008396b0b8db2ca049df18d072dd905fe52d365 -> transmission-4.0.6-with-submodules.tar.xz"
+SRC_URI="https://distfiles.macaronios.org/6c/14/83/6c14838b5185090e52d4073b0a6732b524c73822d82f989aa38dfbe568f7d4c4ba531e2d8ad6515992340fd85f2ed36bd728aa2bf1e2c718794f8f28411b8b75 -> transmission-4.0.6-with-submodules.tar.xz"
 
 # web/LICENSE is always GPL-2 whereas COPYING allows either GPL-2 or GPL-3 for the rest
 # transmission in licenses/ is for mentioning OpenSSL linking exception
