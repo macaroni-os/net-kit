@@ -1,0 +1,14 @@
+BDEPEND=dev-lang/go >=dev-lang/go-1.12 app-arch/unzip virtual/pkgconfig
+DEFINED_PHASES=compile install postinst prepare setup unpack
+DEPEND=sys-apps/shadow
+DESCRIPTION=An Amazon S3 compatible object storage server
+EAPI=7
+HOMEPAGE=https://min.io/ https://github.com/minio/minio
+IUSE=systemd
+KEYWORDS=*
+LICENSE=Apache-2.0 BSD BSD-2 MIT MPL-2.0
+RESTRICT=strip
+SLOT=0
+SRC_URI=https://api.github.com/repos/minio/minio/tarball/RELEASE.2024-08-03T04-33-23Z -> minio-RELEASE.2024-08-03T04-33-23Z.tar.gz https://distfiles.macaronios.org/4b/f9/f8/4bf9f8199257246b2fb08098d12d5c4fc42781e95e108879fea15c1d961c80d80f67b50dcf76995a7aff11ce2dc6f93db10c17490ef331fd93e0c2019fc98c3c -> minio-2024.08.03.04.33.23-funtoo-go-bundle-22ba0af0cc38a9088e87f55f0d53a38d0f472829bb8541c9dedff511e8756f182b2224ad901bb46b37465e9f1dccf520f8adfa817f3a28d2374fa705c78a4407.tar.gz
+_eclasses_=go-module	cb10a443c46556a15ed035d7a99128e8	multilib	d410501a125f99ffb560b0c523cd3d1e	systemd	71fd8d2065d102753fb9e4d20eaf3e9f	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	user	875055ddd565382c728563992ae3abf7	xdg-utils	14d00d009167652b1fa363e55effe213
+_md5_=d8738a57ddb744917e4dac2c98e8d9bb

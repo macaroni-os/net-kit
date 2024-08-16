@@ -1,4 +1,4 @@
-###
-# CoreDNS config
-#
-command_args=""
+# Config file for /etc/init.d/coredns
+
+# Extra args to pass CoreDNS
+COREDNS_ARGS="-conf /etc/coredns/Corefile"

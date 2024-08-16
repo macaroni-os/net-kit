@@ -1,6 +1,7 @@
-dev-db
-dev-lang
-dev-util
+app-admin
+app-benchmarks
+dev-libs
+dev-python
 mail-client
 mail-filter
 mail-mta
@@ -19,15 +20,12 @@ net-nds
 net-news
 net-nntp
 net-p2p
-net-print
 net-proxy
 net-voip
 net-vpn
 net-wireless
-sys-libs
+sys-apps
 virtual
 www-apps
-www-client
 www-misc
-www-plugins
 www-servers

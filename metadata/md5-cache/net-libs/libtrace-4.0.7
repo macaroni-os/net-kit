@@ -1,0 +1,14 @@
+BDEPEND=>=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
+DEFINED_PHASES=configure install prepare
+DEPEND=>=net-libs/libpcap-0.8 dev-libs/openssl:0= ncurses? ( sys-libs/ncurses:0= ) net-libs/wandio numa? ( sys-process/numactl ) app-doc/doxygen sys-devel/flex virtual/pkgconfig virtual/yacc
+DESCRIPTION=A library and tools for trace processing
+EAPI=7
+HOMEPAGE=https://research.wand.net.nz/software/libtrace.php
+IUSE=doc ncurses numa static-libs
+KEYWORDS=~amd64 ~x86
+LICENSE=LGPL-3
+RDEPEND=>=net-libs/libpcap-0.8 dev-libs/openssl:0= ncurses? ( sys-libs/ncurses:0= ) net-libs/wandio numa? ( sys-process/numactl )
+SLOT=0
+SRC_URI=https://research.wand.net.nz/software/libtrace/libtrace-4.0.7.tar.gz
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=2d6e9c0ab70ede3c62eadd83e3dcf564

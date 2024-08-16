@@ -1,0 +1,15 @@
+DEFINED_PHASES=install postinst postrm preinst prepare unpack
+DEPEND=sys-apps/fix-gnustack
+DESCRIPTION=Chat and network platform
+EAPI=6
+HOMEPAGE=http://www.gitter.im/
+IUSE=pax_kernel abi_x86_32 abi_x86_64
+KEYWORDS=-* ~amd64 ~x86
+LICENSE=all-rights-reserved
+RDEPEND=dev-libs/atk:0[-mgorny(-)] dev-libs/expat:0[-mgorny(-)] dev-libs/glib:2[-mgorny(-)] dev-libs/nspr:0[-mgorny(-)] dev-libs/nss:0[-mgorny(-)] media-libs/alsa-lib:0[-mgorny(-)] sys-apps/dbus:0[-mgorny(-)] x11-libs/cairo:0[-mgorny(-)] x11-libs/gdk-pixbuf:2[-mgorny(-)] x11-libs/gtk+:3[-mgorny(-)] x11-libs/libX11:0[-mgorny(-)] x11-libs/libxcb:0/1.12[-mgorny(-)] x11-libs/libXcomposite:0[-mgorny(-)] x11-libs/libXcursor:0[-mgorny(-)] x11-libs/libXdamage:0[-mgorny(-)] x11-libs/libXext:0[-mgorny(-)] x11-libs/libXfixes:0[-mgorny(-)] x11-libs/libXi:0[-mgorny(-)] x11-libs/libXrandr:0[-mgorny(-)] x11-libs/libXrender:0[-mgorny(-)] x11-libs/libXtst:0[-mgorny(-)] x11-libs/pango:0[-mgorny(-)]
+REQUIRED_USE=|| ( abi_x86_32 abi_x86_64 )
+RESTRICT=bindist mirror
+SLOT=0
+SRC_URI=amd64? ( https://update.gitter.im/linux64/gitter_4.1.0_amd64.deb ) x86? ( https://update.gitter.im/linux32/gitter_4.1.0_i386.deb )
+_eclasses_=desktop	b1d22ac8bdd4679ab79c71aca235009d	epatch	cb17fbe94a2c43cbc0f8e76abf15479a	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	gnome2-utils	532371cfcba45b2ab0d2950547c97d95	ltprune	22f9f14d105434e9c400ccac3bbb64ae	multibuild	b2c915190b051f55a23b9354b9849847	multilib	d410501a125f99ffb560b0c523cd3d1e	multilib-build	dbed54cab0d2fac962c6342aeae40ef9	pax-utils	db85a3c508cf82c45f24b2723791cc93	preserve-libs	ef207dc62baddfddfd39a164d9797648	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	unpacker	cbd6624f820a4289653f5dcb999bea7a	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf	xdg-utils	14d00d009167652b1fa363e55effe213
+_md5_=4e09d0ec46f61899e5a33340f317f5a3

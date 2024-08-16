@@ -1,0 +1,14 @@
+BDEPEND=>=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
+DEFINED_PHASES=configure install postinst prepare
+DEPEND=net-libs/libpcap mysql? ( dev-db/mysql-connector-c:0= ) postgres? ( dev-db/postgresql:*[server] ) sguil? ( dev-lang/tcl:0 )
+DESCRIPTION=Fast output system for Snort
+EAPI=7
+HOMEPAGE=https://sourceforge.net/projects/barnyard
+IUSE=mysql postgres sguil
+KEYWORDS=~amd64 -sparc ~x86
+LICENSE=QPL GPL-2
+RDEPEND=net-libs/libpcap mysql? ( dev-db/mysql-connector-c:0= ) postgres? ( dev-db/postgresql:*[server] ) sguil? ( dev-lang/tcl:0 ) net-analyzer/snort
+SLOT=0
+SRC_URI=mirror://sourceforge/barnyard/barnyard-0.2.0.tar.gz mirror://gentoo/barnyard-0.2.0-patches.tar.bz2
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=594c296ab46cd308a48fe3cb0e015784

@@ -9,7 +9,7 @@ DESCRIPTION="A lightweight email client and newsreader"
 HOMEPAGE="http://sylpheed.sraoss.jp/"
 SRC_URI="http://${PN}.sraoss.jp/${PN}/v${PV%.*}/${P}.tar.bz2"
 
-LICENSE="GPL-2 LGPL-2.1"
+LICENSE="GPL-2+ LGPL-2.1+"
 SLOT="0"
 KEYWORDS="alpha amd64 ~arm ~hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="crypt ipv6 ldap libressl nls oniguruma pda spell ssl xface"
@@ -37,6 +37,12 @@ DEPEND="${CDEPEND}
 	xface? ( media-libs/compface )"
 
 DOCS="AUTHORS ChangeLog* NEW* PLUGIN* README* TODO*"
+
+src_prepare() {
+	sed -i 's/ enchant/ enchant-2/g' configure || die "Sed failed!"
+	sed -i 's,enchant/,enchant-2/,g' src/compose.c || die "Sed failed!"
+	default
+}
 
 src_configure() {
 	local htmldir="${EPREFIX}"/usr/share/doc/${PF}/html

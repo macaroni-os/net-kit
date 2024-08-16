@@ -1,19 +1,29 @@
 #!/sbin/openrc-run
-# Copyright 2017-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-
-description="CoreDNS service"
-pidfile=${pidfile:-"/run/${SVCNAME}.pid"}
-user=${user:-root}
-group=${group:-root}
-
-command="/usr/bin/coredns"
-command_args="${command_args}"
-command_background="true"
-start_stop_daemon_args="--user ${user} --group ${group} \
-	--stdout /var/log/${SVCNAME}/${SVCNAME}.log \
-	--stderr /var/log/${SVCNAME}/${SVCNAME}.log"
 
 depend() {
 	after net
+}
+
+start(){
+	ebegin "Starting CoreDNS"
+
+	start-stop-daemon --start -b \
+		--make-pidfile \
+		--pidfile /run/${RC_SVCNAME}.pid \
+		--stdout /var/log/${RC_SVCNAME}/${RC_SVCNAME}.log \
+		--stderr /var/log/${RC_SVCNAME}/${RC_SVCNAME}.log \
+		--exec /usr/bin/${RC_SVCNAME} -- ${COREDNS_ARGS}
+
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping CoreDNS"
+
+	start-stop-daemon --stop \
+		--pidfile /run/${RC_SVCNAME}.pid \
+		--retry=TERM/20/KILL/5
+
+	eend $?
 }

@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install postinst prepare prerm setup
+DEPEND=python_single_target_python3_10? ( dev-lang/python:3.10 >=dev-lang/python-exec-2:=[python_targets_python3_10] ) python_single_target_python3_7? ( dev-lang/python:3.7 >=dev-lang/python-exec-2:=[python_targets_python3_7] ) python_single_target_python3_9? ( dev-lang/python:3.9 >=dev-lang/python-exec-2:=[python_targets_python3_9] ) python_single_target_python3_8? ( dev-lang/python:3.8 >=dev-lang/python-exec-2:=[python_targets_python3_8] ) dev-libs/openssl:0= dev-vcs/git sys-libs/zlib virtual/httpd-cgi highlight? ( || ( dev-python/pygments app-text/highlight ) ) lua? ( jit? ( dev-lang/luajit ) !jit? ( dev-lang/lua ) ) !<www-apps/cgit-0.8.3.3 doc? ( app-text/docbook-xsl-stylesheets >=app-text/asciidoc-8.5.1 ) sys-apps/shadow >=app-admin/webapp-config-1.50.15
+DESCRIPTION=a fast web-interface for git repositories
+EAPI=7
+HOMEPAGE=https://git.zx2c4.com/cgit/about
+IUSE=doc +highlight +lua +jit python_single_target_python3_10 python_single_target_python3_7 python_single_target_python3_9 python_single_target_python3_8 python_targets_python3_10 python_targets_python3_7 python_targets_python3_9 python_targets_python3_8 vhosts
+KEYWORDS=*
+LICENSE=GPL-2
+RDEPEND=python_single_target_python3_10? ( dev-lang/python:3.10 >=dev-lang/python-exec-2:=[python_targets_python3_10] ) python_single_target_python3_7? ( dev-lang/python:3.7 >=dev-lang/python-exec-2:=[python_targets_python3_7] ) python_single_target_python3_9? ( dev-lang/python:3.9 >=dev-lang/python-exec-2:=[python_targets_python3_9] ) python_single_target_python3_8? ( dev-lang/python:3.8 >=dev-lang/python-exec-2:=[python_targets_python3_8] ) dev-libs/openssl:0= dev-vcs/git sys-libs/zlib virtual/httpd-cgi highlight? ( || ( dev-python/pygments app-text/highlight ) ) lua? ( jit? ( dev-lang/luajit ) !jit? ( dev-lang/lua ) ) >=app-admin/webapp-config-1.50.15
+RESTRICT=test
+SLOT=0
+SRC_URI=https://git.zx2c4.com/cgit/snapshot/cgit-1.2.3.tar.xz -> cgit-1.2.3.tar.xz https://www.kernel.org/pub/software/scm/git/git-2.25.1.tar.xz -> git-2.25.1.tar.xz
+_eclasses_=eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	python-single-r1	ce99dfba1cad0514af51a32b2b6964af	python-utils-r1	d3f9ec72badd0291b655682d67876adc	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	user	875055ddd565382c728563992ae3abf7	webapp	16783e418aca3ffa461d68310bf7ab12
+_md5_=25d75756b95b56bd243dd38fb1ff3595

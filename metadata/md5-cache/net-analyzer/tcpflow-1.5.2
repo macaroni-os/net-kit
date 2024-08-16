@@ -1,0 +1,14 @@
+BDEPEND=>=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
+DEFINED_PHASES=configure prepare
+DEPEND=dev-db/sqlite dev-lang/python:2.7= dev-libs/boost:= dev-libs/openssl:= net-libs/http-parser:= net-libs/libpcap sys-libs/libcap-ng sys-libs/zlib:= cairo? ( x11-libs/cairo ) test? ( sys-apps/coreutils )
+DESCRIPTION=A tool for monitoring, capturing and storing TCP connections flows
+EAPI=7
+HOMEPAGE=https://github.com/simsong/tcpflow
+IUSE=cairo test
+KEYWORDS=~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos
+LICENSE=GPL-3
+RDEPEND=dev-db/sqlite dev-lang/python:2.7= dev-libs/boost:= dev-libs/openssl:= net-libs/http-parser:= net-libs/libpcap sys-libs/libcap-ng sys-libs/zlib:= cairo? ( x11-libs/cairo )
+SLOT=0
+SRC_URI=https://api.github.com/repos/simsong/be13_api/tarball/c81521d768bb78499c069fcd7c47adc8eee0350c -> be13_api-20170924.tar.gz https://api.github.com/repos/simsong/dfxml/tarball/7d11eaa7da8d31f588ce8aecb4b4f5e7e8169ba6 -> dfxml-20170921.tar.gz https://dev.gentoo.org/~jer/be13_api-20170924.tar.gz https://dev.gentoo.org/~jer/dfxml-20170921.tar.gz https://github.com/simsong/tcpflow/archive/tcpflow-1.5.2.tar.gz
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	d0939f99dd528dd0c5ec25284877bf5c	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=c4e09dc1b916b664d9dcc96160808eda

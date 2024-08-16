@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile install
-DEPEND=dev-libs/libevent >=app-portage/elt-patches-20170317
+DEPEND=dev-libs/libevent
 DESCRIPTION=The dnsproxy daemon is a proxy for DNS queries
 EAPI=7
 HOMEPAGE=https://www.wolfermann.org/dnsproxy.html
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=MIT GPL-2
 RDEPEND=dev-libs/libevent
 SLOT=0
 SRC_URI=https://www.wolfermann.org/dnsproxy-1.17.tar.gz
-_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	e99babeaa7d98c1caaa6a61a79902210	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	1fb064d93b3ffd05c2fb19ef430a4aa1	flag-o-matic	02908f00f002f0f07c5b74783d778325	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
-_md5_=1267d3483e324c8c7d7db420721c64c1
+_eclasses_=eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	d0939f99dd528dd0c5ec25284877bf5c	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=38e5818b70a10210c2ccddad781fc9d9

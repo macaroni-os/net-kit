@@ -1,12 +1,11 @@
 DEFINED_PHASES=install postinst
-DEPEND=net-libs/nodejs[npm] app-arch/unzip
-DESCRIPTION=Ghost blogging platform. Ghost allows you to write and publish your own blog, giving you the tools to make it easy and even fun to do.
+DEPEND=net-libs/nodejs[npm(+)] app-arch/unzip
+DESCRIPTION=Ghost blogging platform.
 EAPI=5
 HOMEPAGE=https://ghost.org
 KEYWORDS=*
 LICENSE=MIT
-RDEPEND=net-libs/nodejs[npm]
-RESTRICT=mirror
+RDEPEND=net-libs/nodejs[npm(+)]
 SLOT=0
 SRC_URI=https://github.com/TryGhost/Ghost/releases/download/1.7.0/Ghost-1.7.0.zip
-_md5_=9905241d7da60d83aed969f5add8bc1d
+_md5_=20ebcf4d0e10315796e3f75b0d9738af

@@ -1,0 +1,16 @@
+BDEPEND=>=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
+DEFINED_PHASES=configure install postinst prepare setup
+DEPEND=dev-libs/boost:= dev-libs/libevent:= >=dev-libs/libsecp256k1-0.2.0:=[recovery,schnorr] >=dev-libs/univalue-1.0.4:= virtual/bitcoin-leveldb nat-pmp? ( net-libs/libnatpmp ) sqlite? ( >=dev-db/sqlite-3.7.17:= ) upnp? ( >=net-libs/miniupnpc-1.9.20150916:= ) berkdb? ( sys-libs/db:4.8=[cxx] ) zeromq? ( net-libs/zeromq:= ) systemtap? ( dev-util/systemtap ) sys-apps/shadow
+DESCRIPTION=Original Bitcoin crypto-currency wallet for automated services
+EAPI=7
+HOMEPAGE=https://bitcoincore.org/
+IUSE=+asm +berkdb examples +external-signer nat-pmp sqlite systemtap test upnp +wallet zeromq
+KEYWORDS=*
+LICENSE=MIT
+RDEPEND=dev-libs/boost:= dev-libs/libevent:= >=dev-libs/libsecp256k1-0.2.0:=[recovery,schnorr] >=dev-libs/univalue-1.0.4:= virtual/bitcoin-leveldb nat-pmp? ( net-libs/libnatpmp ) sqlite? ( >=dev-db/sqlite-3.7.17:= ) upnp? ( >=net-libs/miniupnpc-1.9.20150916:= ) berkdb? ( sys-libs/db:4.8=[cxx] ) zeromq? ( net-libs/zeromq:= )
+REQUIRED_USE=sqlite? ( wallet ) berkdb? ( wallet ) wallet? ( || ( berkdb sqlite ) )
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://bitcoincore.org/bin/bitcoin-core-24.0.1/bitcoin-24.0.1.tar.gz -> bitcoin-24.0.1.tar.gz
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	bash-completion-r1	47a7402d95930413ce25ba8d857339bb	db-use	501a5d0963e0d17f30260023f292ae8e	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	user	875055ddd565382c728563992ae3abf7
+_md5_=688b9aec6841b7e9ed5c85e71de12a80

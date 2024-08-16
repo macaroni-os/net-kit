@@ -1,0 +1,11 @@
+DEFINED_PHASES=install postinst postrm unpack
+DESCRIPTION=Desktop chat client for Slack and Discord (not web-based).
+EAPI=7
+HOMEPAGE=https://cancel.fm/ripcord
+KEYWORDS=~amd64
+LICENSE=Ripcord
+RDEPEND=dev-libs/libsodium dev-qt/qtconcurrent:5 dev-qt/qtgui:5 dev-qt/qtmultimedia:5[gstreamer] dev-qt/qtnetwork:5 dev-qt/qtsvg:5 dev-qt/qtwebsockets:5 dev-qt/qtwidgets:5 media-libs/opus virtual/opengl
+SLOT=0
+SRC_URI=https://cancel.fm/dl/Ripcord-0.4.29-x86_64.AppImage -> Ripcord-0.4.29-x86_64.AppImage
+_eclasses_=desktop	b1d22ac8bdd4679ab79c71aca235009d	xdg-utils	14d00d009167652b1fa363e55effe213
+_md5_=3044abcdb4bec42bf5b95848496e6443

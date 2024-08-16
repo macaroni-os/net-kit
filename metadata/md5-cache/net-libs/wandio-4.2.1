@@ -1,0 +1,14 @@
+BDEPEND=>=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
+DEFINED_PHASES=configure prepare test
+DEPEND=!<net-libs/libtrace-4 bzip2? ( app-arch/bzip2 ) lzma? ( app-arch/xz-utils ) lzo? ( dev-libs/lzo ) http? ( net-misc/curl ) zlib? ( sys-libs/zlib ) test? ( app-arch/lzop )
+DESCRIPTION=C library for simple and efficient file IO
+EAPI=7
+HOMEPAGE=https://research.wand.net.nz/software/libwandio.php
+IUSE=bzip2 http lzma lzo static-libs test zlib
+KEYWORDS=~amd64 ~x86
+LICENSE=LGPL-3
+RDEPEND=!<net-libs/libtrace-4 bzip2? ( app-arch/bzip2 ) lzma? ( app-arch/xz-utils ) lzo? ( dev-libs/lzo ) http? ( net-misc/curl ) zlib? ( sys-libs/zlib )
+SLOT=0/6
+SRC_URI=https://github.com/wanduow/wandio/archive/4.2.1.tar.gz -> wandio-4.2.1.tar.gz
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=4583ca55e4c9e001337c52c6b3d487c8

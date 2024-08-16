@@ -1,12 +1,13 @@
 DEFINED_PHASES=compile configure install postinst prepare pretend unpack
-DEPEND=libressl? ( dev-libs/libressl:0= ) !libressl? ( internal-tls? ( dev-libs/libtommath ) !internal-tls? ( dev-libs/openssl:0=[-bindist] ) ) kernel_linux? ( dev-libs/libnl:3 crda? ( net-wireless/crda ) ) netlink? ( net-libs/libnfnetlink ) sqlite? ( >=dev-db/sqlite-3 ) >=app-portage/elt-patches-20170317 virtual/pkgconfig >=dev-vcs/git-1.8.2.1
+DEPEND=libressl? ( dev-libs/libressl:0= ) !libressl? ( internal-tls? ( dev-libs/libtommath ) !internal-tls? ( dev-libs/openssl:0=[-bindist] ) ) kernel_linux? ( dev-libs/libnl:3 crda? ( net-wireless/crda ) ) netlink? ( net-libs/libnfnetlink ) sqlite? ( >=dev-db/sqlite-3 ) virtual/pkgconfig >=dev-vcs/git-1.8.2.1[curl]
 DESCRIPTION=IEEE 802.11 wireless LAN Host AP daemon
 EAPI=6
 HOMEPAGE=http://w1.fi
 IUSE=internal-tls ipv6 libressl logwatch netlink sqlite +wps +crda savedconfig
 LICENSE=BSD
+PROPERTIES=live
 RDEPEND=libressl? ( dev-libs/libressl:0= ) !libressl? ( internal-tls? ( dev-libs/libtommath ) !internal-tls? ( dev-libs/openssl:0=[-bindist] ) ) kernel_linux? ( dev-libs/libnl:3 crda? ( net-wireless/crda ) ) netlink? ( net-libs/libnfnetlink ) sqlite? ( >=dev-db/sqlite-3 )
 SLOT=0
-SRC_URI=https://dev.gentoo.org/~andrey_utkin/distfiles/net-wireless_hostapd_2.6-r5_extras.tar.xz
-_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	e99babeaa7d98c1caaa6a61a79902210	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	1fb064d93b3ffd05c2fb19ef430a4aa1	git-r3	18aed4252aebae08e3db185e684ee37c	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	portability	2b88d3ecc35035a3b8ab628b49cafb0e	savedconfig	e6948c872ff47e15a10e5ad1be15c18e	systemd	1caaa6bdb6e41b2920a203d6b45f2f99	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
-_md5_=98a7d408ba38b1ed704cc2fe51221ea4
+SRC_URI=https://dev.gentoo.org/~andrey_utkin/distfiles/net-wireless_hostapd_2.7-r2_extras.tar.xz
+_eclasses_=git-r3	7dcb8a92f5a091f13e82494fa317ca4b	multilib	d410501a125f99ffb560b0c523cd3d1e	portability	2b88d3ecc35035a3b8ab628b49cafb0e	savedconfig	1de3f25f1039cd1772fbf707ef87dbe3	systemd	71fd8d2065d102753fb9e4d20eaf3e9f	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=6461787f7b11efd0b6f3c6b7d92c3fb2

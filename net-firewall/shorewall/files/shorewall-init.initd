@@ -1,5 +1,4 @@
 #!/sbin/openrc-run
-# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 SHOREWALLRC_FILE="@GENTOO_PORTAGE_EPREFIX@/usr/share/shorewall/shorewallrc"
@@ -75,7 +74,7 @@ is_allowed_to_be_executed() {
 	# This is not a real service. shorewall-init is an intermediate
 	# script to put your Shorewall-based firewall into a safe state
 	# at boot time prior to bringing up the network.
-	# Please read /usr/share/doc/shorewall-init-*/README.gentoo.gz
+	# Please read /usr/share/doc/shorewall-init-*/README.funtoo.gz
 	# for more information.
 	# When your system is up, there is no need to call shorewall-init.
 	# Please call shorewall{,6,-lite,6-lite} directly. That's the

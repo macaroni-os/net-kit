@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install prepare setup
+DEPEND=net-libs/mbedtls:= net-libs/libbloom net-libs/libcork net-libs/libcorkipset >=dev-libs/libsodium-1.0.8:= dev-libs/libev net-dns/c-ares dev-libs/libpcre sys-kernel/linux-headers doc? ( app-text/asciidoc app-text/xmlto ) >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4 virtual/pkgconfig
+DESCRIPTION=A lightweight secured SOCKS5 proxy for embedded devices and low end boxes
+EAPI=6
+HOMEPAGE=https://github.com/shadowsocks/shadowsocks-libev
+IUSE=debug doc
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3+
+RDEPEND=net-libs/mbedtls:= net-libs/libbloom net-libs/libcork net-libs/libcorkipset >=dev-libs/libsodium-1.0.8:= dev-libs/libev net-dns/c-ares dev-libs/libpcre
+SLOT=0
+SRC_URI=https://github.com/shadowsocks/shadowsocks-libev/archive/v3.2.4.tar.gz -> shadowsocks-libev-3.2.4.tar.gz
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	desktop	b1d22ac8bdd4679ab79c71aca235009d	epatch	cb17fbe94a2c43cbc0f8e76abf15479a	eqawarn	bb3d80ca38bc542ed397ab65f64256a6	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	libtool	f143db5a74ccd9ca28c1234deffede96	ltprune	22f9f14d105434e9c400ccac3bbb64ae	multilib	d410501a125f99ffb560b0c523cd3d1e	preserve-libs	ef207dc62baddfddfd39a164d9797648	systemd	71fd8d2065d102753fb9e4d20eaf3e9f	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf
+_md5_=f729929822b0b6e15c610c0975d6ec9a

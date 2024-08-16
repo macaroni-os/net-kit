@@ -1,0 +1,15 @@
+BDEPEND=app-arch/xz-utils virtual/pkgconfig nls? ( sys-devel/gettext ) virtual/pkgconfig
+DEFINED_PHASES=compile configure install postinst preinst prepare pretend setup
+DEPEND=dbus? ( sys-apps/dbus:= ) idn? ( !libidn2? ( net-dns/libidn:0= ) libidn2? ( >=net-dns/libidn2-2.0:= ) ) lua? ( lua_single_target_luajit? ( dev-lang/luajit:= ) lua_single_target_lua5-1? ( dev-lang/lua:5.1 ) lua_single_target_lua5-2? ( dev-lua/lua:5.2 ) lua_single_target_lua5-3? ( dev-lua/lua:5.3 ) lua_single_target_lua5-4? ( dev-lua/lua:5.4 ) ) conntrack? ( net-libs/libnetfilter_conntrack:= ) nls? ( sys-devel/gettext ) dnssec? ( dev-libs/nettle:=[gmp] static? ( >=dev-libs/nettle-3.4[static-libs(+)] ) ) sys-apps/shadow
+DESCRIPTION=Small forwarding DNS server
+EAPI=7
+HOMEPAGE=http://www.thekelleys.org.uk/dnsmasq/doc.html
+IUSE=auth-dns conntrack dbus +dhcp dhcp-tools dnssec +dumpfile id idn libidn2 +inotify ipv6 lua nettlehash nls +script selinux static tftp lua_single_target_luajit lua_single_target_lua5-1 lua_single_target_lua5-2 lua_single_target_lua5-3 lua_single_target_lua5-4
+KEYWORDS=*
+LICENSE=|| ( GPL-2 GPL-3 )
+RDEPEND=dbus? ( sys-apps/dbus:= ) idn? ( !libidn2? ( net-dns/libidn:0= ) libidn2? ( >=net-dns/libidn2-2.0:= ) ) lua? ( lua_single_target_luajit? ( dev-lang/luajit:= ) lua_single_target_lua5-1? ( dev-lang/lua:5.1 ) lua_single_target_lua5-2? ( dev-lua/lua:5.2 ) lua_single_target_lua5-3? ( dev-lua/lua:5.3 ) lua_single_target_lua5-4? ( dev-lua/lua:5.4 ) ) conntrack? ( net-libs/libnetfilter_conntrack:= ) nls? ( sys-devel/gettext ) dnssec? ( !static? ( >=dev-libs/nettle-3.4:=[gmp] ) ) selinux? ( sec-policy/selinux-dnsmasq )
+REQUIRED_USE=dhcp-tools? ( dhcp ) dnssec? ( !nettlehash ) lua? ( script ^^ ( lua_single_target_luajit lua_single_target_lua5-1 lua_single_target_lua5-2 lua_single_target_lua5-3 lua_single_target_lua5-4 ) ) libidn2? ( idn )
+SLOT=0
+SRC_URI=http://www.thekelleys.org.uk/dnsmasq/dnsmasq-2.90.tar.xz -> dnsmasq-2.90.tar.xz
+_eclasses_=eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	d0939f99dd528dd0c5ec25284877bf5c	lua-single	d51249bd993b9dda6dde2d2276b8dc90	lua-utils	28bbf8186b61ef178869ccad634359d2	multilib	d410501a125f99ffb560b0c523cd3d1e	systemd	71fd8d2065d102753fb9e4d20eaf3e9f	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	user	875055ddd565382c728563992ae3abf7
+_md5_=7c112a699b623c1b4547f173beec55f5

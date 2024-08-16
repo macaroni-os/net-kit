@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst prepare prerm setup test unpack
-DEPEND==dev-lang/perl-5* =www-apache/libapreq2-2*[perl] >=media-libs/imlib2-1.0.6-r1 dev-perl/URI >=dev-perl/Image-Info-1.40.0 >=dev-perl/Image-Size-2.990.0 dev-perl/Text-Template >=dev-perl/CGI-3.08 dev-perl/Image-Imlib2 =www-servers/apache-2* >=app-portage/elt-patches-20170317 dev-lang/perl:=[-build(-)] >=app-admin/webapp-config-1.50.15
+DEPEND==dev-lang/perl-5* =www-apache/libapreq2-2*[perl] >=media-libs/imlib2-1.0.6-r1 dev-perl/URI >=dev-perl/Image-Info-1.40.0 >=dev-perl/Image-Size-2.990.0 dev-perl/Text-Template >=dev-perl/CGI-3.08 dev-perl/Image-Imlib2 =www-servers/apache-2* dev-lang/perl:=[-build(-)] >=app-admin/webapp-config-1.50.15
 DESCRIPTION=Apache gallery for mod_perl
 EAPI=5
 HOMEPAGE=http://apachegallery.dk/
@@ -9,5 +9,5 @@ LICENSE=|| ( Artistic GPL-2 )
 RDEPEND==www-servers/apache-2* dev-lang/perl:=[-build(-)] >=app-admin/webapp-config-1.50.15
 SLOT=0
 SRC_URI=http://apachegallery.dk/download/Apache-Gallery-1.0RC3.tar.gz
-_eclasses_=depend.apache	d0ebe55e7dc965ec2bde48112f75add5	epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	e99babeaa7d98c1caaa6a61a79902210	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	1fb064d93b3ffd05c2fb19ef430a4aa1	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	multiprocessing	cac3169468f893670dac3e7cb940e045	perl-functions	669a1227009eda227739e1621a158a4d	perl-module	b832e3f37aa64cbdd6f3e98274bef14b	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	unpacker	f40f7b4bd5aa88c2a4ba7b0d1e0ded70	webapp	a76ebd3cb5649737496e8238992dd7ca
+_eclasses_=depend.apache	216f1f6065f14a9981803d11fb742c19	desktop	b1d22ac8bdd4679ab79c71aca235009d	epatch	cb17fbe94a2c43cbc0f8e76abf15479a	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	ltprune	22f9f14d105434e9c400ccac3bbb64ae	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	perl-functions	d0d18687b96ee3d2307b88eefdd1735b	perl-module	768f1dfc0a27ff40f1ece5cb8c22714a	preserve-libs	ef207dc62baddfddfd39a164d9797648	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	unpacker	cbd6624f820a4289653f5dcb999bea7a	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf	webapp	16783e418aca3ffa461d68310bf7ab12
 _md5_=103a76f4e76ab5ab94953f578b8acbe6

@@ -1,13 +1,13 @@
 DEFINED_PHASES=install postinst prepare setup
-DEPEND=net-libs/libpcap sys-libs/ncurses:* >=app-portage/elt-patches-20170317
+DEPEND=net-libs/libpcap sys-libs/ncurses:* sys-apps/shadow
 DESCRIPTION=An ethernet monitor program that keeps track of ethernet/IP address pairings
 EAPI=6
-HOMEPAGE=http://ee.lbl.gov/
+HOMEPAGE=https://ee.lbl.gov/
 IUSE=selinux
 KEYWORDS=~amd64 ~hppa ~ppc ~sparc ~x86 ~x86-fbsd
 LICENSE=BSD GPL-2
 RDEPEND=net-libs/libpcap sys-libs/ncurses:* selinux? ( sec-policy/selinux-arpwatch )
 SLOT=0
 SRC_URI=ftp://ftp.ee.lbl.gov/arpwatch-2.1a15.tar.gz https://dev.gentoo.org/~jer/arpwatch-patchset-0.8.tar.xz
-_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	e99babeaa7d98c1caaa6a61a79902210	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	1fb064d93b3ffd05c2fb19ef430a4aa1	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	user	8bc2845510e2109af75e3eeac607ec81	versionator	c80ccf29e90adea7c5cae94b42eb76d0
-_md5_=e1e47678821961b1b299fdf27d169c0d
+_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	user	875055ddd565382c728563992ae3abf7	versionator	2352c3fc97241f6a02042773c8287748
+_md5_=3e2d0339ccce001c37f9289a6da68ad5

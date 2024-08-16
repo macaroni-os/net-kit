@@ -1,9 +1,9 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 
-PYTHON_COMPAT=( python2_7 python3_{4,5,6} )
+PYTHON_COMPAT=( python2_7 python3_{5,6} )
 PYTHON_REQ_USE='threads(+)'
 
 inherit flag-o-matic python-r1 waf-utils systemd user
@@ -143,6 +143,9 @@ src_install() {
 	# Install the configuration file and sample configuration
 	cp -v "${FILESDIR}"/ntp.conf "${ED}"/etc/ntp.conf
 	cp -Rv "${S}"/etc/ntp.d/ "${ED}"/etc/
+
+	# move doc files to /usr/share/doc/"${P}"
+	use doc && mv -v "${ED}"/usr/share/doc/"${PN}" "${ED}"/usr/share/doc/"${P}"/html
 }
 
 pkg_postinst() {

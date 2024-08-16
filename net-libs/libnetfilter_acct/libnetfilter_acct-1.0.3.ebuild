@@ -1,27 +1,27 @@
-# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
-inherit eutils linux-info multilib
+EAPI=7
 
-DESCRIPTION="Userspace library providing interface to extended accounting infrastructure of NetFilter"
+inherit linux-info
+
+DESCRIPTION="Library providing interface to extended accounting infrastructure"
 HOMEPAGE="https://netfilter.org/projects/libnetfilter_acct/"
-SRC_URI="https://www.netfilter.org/projects/${PN}/files/${P}.tar.bz2"
+SRC_URI="https://www.netfilter.org/pub/libnetfilter_acct/libnetfilter_acct-1.0.3.tar.bz2 -> libnetfilter_acct-1.0.3.tar.bz2
+"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86 ~amd64-linux"
+KEYWORDS="*"
 IUSE="examples"
 
 RDEPEND="
 	net-libs/libmnl
 "
-DEPEND="
-	${RDEPEND}
-	virtual/pkgconfig
-"
+DEPEND="${RDEPEND}"
+BDEPEND="virtual/pkgconfig"
 
 DOCS=( README )
+
 CONFIG_CHECK="~NETFILTER_NETLINK_ACCT"
 
 pkg_setup() {
@@ -46,5 +46,7 @@ src_install() {
 		docompress -x /usr/share/doc/${P}/examples
 	fi
 
-	prune_libtool_files
+	find "${ED}" -name '*.la' -delete || die
+
 }
+# vim: noet ts=4 syn=ebuild

@@ -1,0 +1,15 @@
+BDEPEND=>=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
+DEFINED_PHASES=configure install prepare pretend setup
+DEPEND=dev-libs/glib:2 gadu? ( <net-libs/libgadu-1.12:0= ) gpg? ( app-crypt/gpgme:1= ) gtk? ( x11-libs/gtk+:2 ) nls? ( virtual/libintl:0= ) openssl? ( dev-libs/openssl:0= ) perl? ( dev-lang/perl:0= ) python? ( python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7] ) ) readline? ( sys-libs/readline:0= ) rss? ( dev-libs/expat:0= ) ssl? ( net-libs/gnutls:0= ) xmpp? ( dev-libs/expat:0= ) zlib? ( sys-libs/zlib:0= ) ncurses? ( sys-libs/ncurses:0=[unicode=] gpm? ( sys-libs/gpm:0= ) spell? ( app-text/aspell:0= ) ) sqlite? ( dev-db/sqlite:3= ) sys-devel/gettext
+DESCRIPTION=Text-based, multi-protocol instant messenger
+EAPI=7
+HOMEPAGE=https://github.com/ekg2/ekg2/
+IUSE=gadu gpm gpg gtk minimal ncurses nls nntp openssl perl python readline rss spell sqlite ssl xmpp unicode zlib python_single_target_python2_7 python_targets_python2_7
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-2
+RDEPEND=dev-libs/glib:2 gadu? ( <net-libs/libgadu-1.12:0= ) gpg? ( app-crypt/gpgme:1= ) gtk? ( x11-libs/gtk+:2 ) nls? ( virtual/libintl:0= ) openssl? ( dev-libs/openssl:0= ) perl? ( dev-lang/perl:0= ) python? ( python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7] ) ) readline? ( sys-libs/readline:0= ) rss? ( dev-libs/expat:0= ) ssl? ( net-libs/gnutls:0= ) xmpp? ( dev-libs/expat:0= ) zlib? ( sys-libs/zlib:0= ) ncurses? ( sys-libs/ncurses:0=[unicode=] gpm? ( sys-libs/gpm:0= ) spell? ( app-text/aspell:0= ) ) sqlite? ( dev-db/sqlite:3= )
+REQUIRED_USE=python? ( ^^ ( python_single_target_python2_7 ) )
+SLOT=0
+SRC_URI=https://github.com/ekg2/ekg2/archive/f427d083ee899d42532c046100490a915b0e8a82.tar.gz -> ekg2-f427d083ee899d42532c046100490a915b0e8a82.tar.gz
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	python-single-r1	ce99dfba1cad0514af51a32b2b6964af	python-utils-r1	d3f9ec72badd0291b655682d67876adc	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=8e8689fdf9216f750de32a972fc12f88

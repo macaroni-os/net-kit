@@ -1,12 +1,13 @@
+BDEPEND=virtual/pkgconfig
 DEFINED_PHASES=compile configure install prepare setup
-DEPEND=dev-qt/qtcore:5 doc? ( app-doc/doxygen ) virtual/pkgconfig
+DEPEND=dev-qt/qtcore:5 doc? ( app-doc/doxygen )
 DESCRIPTION=A multicast proxy for IGMP/MLD
 EAPI=7
 HOMEPAGE=https://mcproxy.realmv6.org/ https://github.com/mcproxy/mcproxy
 IUSE=doc kernel_linux
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=GPL-2+
 SLOT=0
 SRC_URI=https://github.com/mcproxy/mcproxy/archive/v1.1.1.tar.gz -> mcproxy-1.1.1.tar.gz
-_eclasses_=estack	5ac2a138d0b33354b764d84f9e835db8	linux-info	953c3b1c472dcadbf62098a9301327f2	multilib	97f470f374f2e94ccab04a2fb21d811e	qmake-utils	990448b067cb3cfe1443bc25fb57239c	systemd	1caaa6bdb6e41b2920a203d6b45f2f99	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
-_md5_=db2cf10fe81fdad10296cc6ff2f9014c
+_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	linux-info	c90a203b1c14cfa77bd3e37a0e96c955	multilib	d410501a125f99ffb560b0c523cd3d1e	qmake-utils	bdf97e69a34b864d6d545f4ec3143ff7	systemd	71fd8d2065d102753fb9e4d20eaf3e9f	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=745bdda6035f166f0d4caf9e8176f478

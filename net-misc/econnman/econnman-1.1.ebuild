@@ -1,19 +1,18 @@
-# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{4..7} )
+PYTHON_COMPAT=( python3+ )
 
 inherit python-single-r1
 
 DESCRIPTION="ConnMan User Interface written with EFL & python"
 HOMEPAGE="https://phab.enlightenment.org/w/projects/econnman/ https://www.enlightenment.org/"
-SRC_URI="https://download.enlightenment.org/rel/apps/${PN}/${P}.tar.xz"
+SRC_URI="https://download.enlightenment.org/rel/apps/econnman/econnman-1.1.tar.xz -> econnman-1.1.tar.xz"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="*"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 

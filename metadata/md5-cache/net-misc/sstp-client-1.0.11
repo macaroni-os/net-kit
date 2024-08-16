@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare setup
-DEPEND=>=dev-libs/libevent-2.0.10 dev-libs/openssl:0= net-dialup/ppp:= virtual/pkgconfig >=app-portage/elt-patches-20170317 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=>=dev-libs/libevent-2.0.10 dev-libs/openssl:0= net-dialup/ppp:= virtual/pkgconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4 sys-apps/shadow
 DESCRIPTION=A client implementation of Secure Socket Tunneling Protocol (SSTP)
 EAPI=6
 HOMEPAGE=http://sstp-client.sourceforge.net/
@@ -9,5 +9,5 @@ LICENSE=GPL-2+-with-openssl-exception
 RDEPEND=>=dev-libs/libevent-2.0.10 dev-libs/openssl:0= net-dialup/ppp:=
 SLOT=0
 SRC_URI=mirror://sourceforge/sstp-client/sstp-client-1.0.11.tar.gz
-_eclasses_=autotools	dc412f38566b91012efd58b9c203e6c3	eapi7-ver	d97a56a62c7df8614afddcb25f5ff00f	libtool	e32ea84bf82cf8987965b574672dba93	linux-info	953c3b1c472dcadbf62098a9301327f2	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	user	8bc2845510e2109af75e3eeac607ec81
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	eapi7-ver	756b3f27d8e46131d5cf3c51bd876446	eqawarn	bb3d80ca38bc542ed397ab65f64256a6	libtool	f143db5a74ccd9ca28c1234deffede96	linux-info	c90a203b1c14cfa77bd3e37a0e96c955	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	user	875055ddd565382c728563992ae3abf7
 _md5_=c87a8b7c500b3b1b4ac827a979f64535

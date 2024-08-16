@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install prepare
+DEPEND=>=dev-libs/libowfat-0.28-r1 diet? ( dev-libs/dietlibc )
+DESCRIPTION=Utility for copying files in a LAN (npoll, npush)
+EAPI=7
+HOMEPAGE=https://www.fefe.de/ncp/
+IUSE=diet
+KEYWORDS=~amd64 ~x86
+LICENSE=public-domain
+SLOT=0
+SRC_URI=https://dl.fefe.de/ncp-1.2.4.tar.bz2
+_eclasses_=multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=35b2c6ade8aaaf163d0cb49fb2090d98

@@ -1,0 +1,14 @@
+BDEPEND=dev-util/intltool virtual/pkgconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
+DEFINED_PHASES=configure install prepare
+DEPEND=app-crypt/libsecret >=net-libs/libnma-1.1.0 net-misc/networkmanager >=net-vpn/strongswan-5.8.3[networkmanager] !gtk4? ( x11-libs/gtk+:3 ) gtk4? ( net-libs/libnma gui-libs/gtk:4 )
+DESCRIPTION=NetworkManager StrongSwan plugin
+EAPI=7
+HOMEPAGE=https://www.strongswan.org/
+IUSE=gtk4
+KEYWORDS=*
+LICENSE=GPL-2+
+RDEPEND=app-crypt/libsecret >=net-libs/libnma-1.1.0 net-misc/networkmanager >=net-vpn/strongswan-5.8.3[networkmanager] !gtk4? ( x11-libs/gtk+:3 ) gtk4? ( net-libs/libnma gui-libs/gtk:4 )
+SLOT=0
+SRC_URI=https://download.strongswan.org/NetworkManager/NetworkManager-strongswan-1.6.0.tar.bz2
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=035066b67e8efc2867cbc72b1812874d

@@ -1,0 +1,14 @@
+BDEPEND=sys-apps/kmod[tools] modules-sign? ( dev-libs/openssl virtual/pkgconfig )
+DEFINED_PHASES=compile install postinst setup
+DEPEND=virtual/linux-sources
+DESCRIPTION=AmneziaWG Linux kernel module
+EAPI=7
+HOMEPAGE=https://github.com/amnezia-vpn/amneziawg-linux-kernel-module
+IUSE=kernel_linux dist-kernel modules-sign +strip
+KEYWORDS=*
+LICENSE=GPL-2
+RDEPEND=sys-apps/kmod[tools] dist-kernel? ( virtual/dist-kernel:= )
+SLOT=0
+SRC_URI=https://github.com/amnezia-vpn/amneziawg-linux-kernel-module/tarball/069c78967197d9a0267083203759803fecd75c08 -> amneziawg-linux-kernel-module-1.0.20240711-069c789.tar.gz
+_eclasses_=edo	c0eb9cbe6b0bd01fcb4918f12598a4d3	linux-info	c90a203b1c14cfa77bd3e37a0e96c955	linux-mod-r1	210efaa18996d2036dd136143fe2ce3b	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=e0db68a4365d4c86c0309c2437a62f5b

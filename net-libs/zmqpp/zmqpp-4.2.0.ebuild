@@ -1,19 +1,13 @@
-# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
-if [[ $PV == 9999 ]]; then
-	inherit git-r3
-	EGIT_REPO_URI="https://github.com/zeromq/zmqpp.git"
-else
-	SRC_URI="https://github.com/zeromq/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
-fi
-inherit cmake-utils
+inherit cmake
 
-DESCRIPTION="ZeroMQ 'highlevel' C++ bindings"
+DESCRIPTION="0mq 'highlevel' C++ bindings"
 HOMEPAGE="https://github.com/zeromq/zmqpp"
+SRC_URI="https://github.com/zeromq/zmqpp/tarball/f8ff127683dc555aa004c0e6e2b18d2354a375be -> zmqpp-4.2.0-f8ff127.tar.gz"
+KEYWORDS="*"
 
 LICENSE="MPL-2.0"
 SLOT="0"
@@ -24,6 +18,14 @@ RDEPEND="${DEPEND}"
 
 PATCHES=( "${FILESDIR}/${P}-multilib-strict.patch" )
 
+src_prepare() {
+	# Use multilib dir names
+	sed -i \
+		-e "s:\(LIBRARY DESTINATION \)lib:\1 \$(CMAKE_INSTALL_LIBDIR):" \
+		-e "s:\(ARCHIVE DESTINATION \)lib:\1 \$(CMAKE_INSTALL_LIBDIR):" \
+	CMakeLists.txt
+}
+
 src_configure() {
 	local mycmakeargs=(
 		-DIS_TRAVIS_CI_BUILD=OFF
@@ -31,5 +33,5 @@ src_configure() {
 		-DZMQPP_BUILD_STATIC=$(usex static-libs)
 	)
 
-	cmake-utils_src_configure
+	cmake_src_configure
 }

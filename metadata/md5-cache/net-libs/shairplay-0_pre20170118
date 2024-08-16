@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare unpack
-DEPEND=tools? ( media-libs/libao ) >=app-portage/elt-patches-20170317 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=tools? ( media-libs/libao ) >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
 DESCRIPTION=Apple airplay and raop protocol server
 EAPI=6
 HOMEPAGE=https://github.com/juhovh/shairplay
@@ -9,5 +9,5 @@ LICENSE=BSD LGPL-2.1 MIT
 RDEPEND=alac? ( media-sound/alac_decoder net-libs/shairplay[tools] ) tools? ( dev-libs/openssl:0= net-dns/avahi[mdnsresponder-compat] )
 SLOT=0
 SRC_URI=https://github.com/juhovh/shairplay/archive/498bc5bcdd305e04721f94a04b9f26a7da72673f.tar.gz -> shairplay-0_pre20170118.tar.gz
-_eclasses_=autotools	dc412f38566b91012efd58b9c203e6c3	libtool	e32ea84bf82cf8987965b574672dba93	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	vcs-snapshot	80ddf8e42aad3fa1cdc08166f446f632
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	eqawarn	bb3d80ca38bc542ed397ab65f64256a6	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	vcs-snapshot	b1abf460a493fc59ebb25de0df3f09dd
 _md5_=2d27c2971d18fb89c35ac25af41eae74

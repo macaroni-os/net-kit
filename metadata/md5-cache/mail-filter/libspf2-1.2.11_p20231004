@@ -1,0 +1,14 @@
+BDEPEND=>=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
+DEFINED_PHASES=configure install prepare
+DESCRIPTION=libspf2 implements the Sender Policy Framework, a part of the SPF/SRS protocols
+EAPI=7
+HOMEPAGE=http://www.libspf2.org
+IUSE=static static-libs
+KEYWORDS=*
+LICENSE=|| ( LGPL-2.1 BSD-2 )
+RDEPEND=!dev-perl/Mail-SPF-Query
+REQUIRED_USE=static? ( static-libs )
+SLOT=0
+SRC_URI=https://github.com/shevek/libspf2/archive/d14abff4b544cfc53a8b5ef54cbc2353866b5081.zip -> libspf2-1.2.11_p20231004-d14abff.zip
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=809e3b89d04b4e4f13b572849d93b091

@@ -1,0 +1,15 @@
+BDEPEND=doc? ( app-doc/doxygen )
+DEFINED_PHASES=configure install prepare
+DEPEND=dev-qt/qtcore:5 dev-qt/qtdeclarative:5 net-libs/accounts-qt net-libs/signond test? ( dev-qt/qtgui:5 dev-qt/qttest:5 )
+DESCRIPTION=QML bindings for accounts-qt and signond
+EAPI=7
+HOMEPAGE=https://accounts-sso.gitlab.io/
+IUSE=doc test
+KEYWORDS=*
+LICENSE=LGPL-2.1
+RDEPEND=dev-qt/qtcore:5 dev-qt/qtdeclarative:5 net-libs/accounts-qt net-libs/signond
+RESTRICT=test
+SLOT=0
+SRC_URI=https://gitlab.com/accounts-sso/accounts-qml-module/-/archive/VERSION_0.7/accounts-qml-module-VERSION_0.7.tar.gz
+_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	multilib	d410501a125f99ffb560b0c523cd3d1e	qmake-utils	bdf97e69a34b864d6d545f4ec3143ff7	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=978543f4b8f9dff5ee771a7894354a7d

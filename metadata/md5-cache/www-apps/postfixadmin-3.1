@@ -1,5 +1,5 @@
 DEFINED_PHASES=install postinst postrm prerm setup
-DEPEND=dev-lang/php:*[unicode,imap,postgres?] vacation? ( dev-perl/DBI virtual/perl-MIME-Base64 dev-perl/MIME-EncWords dev-perl/Email-Valid dev-perl/Mail-Sender dev-perl/Log-Dispatch dev-perl/Log-Log4perl dev-perl/MIME-Charset mysql? ( dev-perl/DBD-mysql ) postgres? ( dev-perl/DBD-Pg ) ) || ( virtual/httpd-cgi virtual/httpd-fastcgi ) >=app-admin/webapp-config-1.50.15
+DEPEND=dev-lang/php:*[unicode,imap,postgres?] vacation? ( dev-perl/DBI virtual/perl-MIME-Base64 dev-perl/MIME-EncWords dev-perl/Email-Valid dev-perl/Mail-Sender dev-perl/Log-Dispatch dev-perl/Log-Log4perl dev-perl/MIME-Charset mysql? ( dev-perl/DBD-mysql ) postgres? ( dev-perl/DBD-Pg ) ) || ( virtual/httpd-cgi virtual/httpd-fastcgi ) sys-apps/shadow >=app-admin/webapp-config-1.50.15
 DESCRIPTION=Web Based Management tool for Postfix style virtual domains and users
 EAPI=6
 HOMEPAGE=http://postfixadmin.sourceforge.net
@@ -10,5 +10,5 @@ RDEPEND=dev-lang/php:*[unicode,imap,postgres?] vacation? ( dev-perl/DBI virtual/
 REQUIRED_USE=|| ( mysql postgres )
 SLOT=3.1
 SRC_URI=mirror://sourceforge/project/postfixadmin/postfixadmin/postfixadmin-3.1/postfixadmin-3.1.tar.gz
-_eclasses_=user	8bc2845510e2109af75e3eeac607ec81	webapp	a76ebd3cb5649737496e8238992dd7ca
+_eclasses_=user	875055ddd565382c728563992ae3abf7	webapp	16783e418aca3ffa461d68310bf7ab12
 _md5_=cfb867b716b35ce399f8c37f4cb48ebb

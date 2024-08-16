@@ -1,7 +1,6 @@
-# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="A ping-like TCP/IP packet assembler/analyzer"
@@ -11,7 +10,7 @@ SRC_URI="https://github.com/antirez/${PN}/archive/${HPING_COMMIT}.zip -> ${P}.zi
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="*"
 IUSE="tcl"
 
 S=${WORKDIR}/${PN}-${HPING_COMMIT}
@@ -33,6 +32,7 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-3_pre20141226-pcap-bpf.patch
 	"${FILESDIR}"/${PN}-3_pre20141226-scan-overflow.patch
 	"${FILESDIR}"/${PN}-3_pre20141226-unused-but-set.patch
+	"${FILESDIR}"/${PN}-3_pre20141226-fno-common.patch
 )
 
 src_configure() {

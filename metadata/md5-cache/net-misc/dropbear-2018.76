@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst preinst prepare
-DEPEND=!static? ( zlib? ( sys-libs/zlib ) dev-libs/libtommath ) pam? ( virtual/pam ) static? ( zlib? ( sys-libs/zlib[static-libs(+)] ) dev-libs/libtommath[static-libs(+)] ) >=app-portage/elt-patches-20170317
+DEPEND=!static? ( zlib? ( sys-libs/zlib ) dev-libs/libtommath ) pam? ( virtual/pam ) static? ( zlib? ( sys-libs/zlib[static-libs(+)] ) dev-libs/libtommath[static-libs(+)] ) sys-apps/shadow
 DESCRIPTION=small SSH 2 client/server designed for small memory environments
 EAPI=5
 HOMEPAGE=https://matt.ucc.asn.au/dropbear/dropbear.html
@@ -10,5 +10,5 @@ RDEPEND=!static? ( zlib? ( sys-libs/zlib ) dev-libs/libtommath ) pam? ( virtual/
 REQUIRED_USE=pam? ( !static )
 SLOT=0
 SRC_URI=https://matt.ucc.asn.au/dropbear/releases/dropbear-2018.76.tar.bz2 https://matt.ucc.asn.au/dropbear/testing/dropbear-2018.76.tar.bz2
-_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	e99babeaa7d98c1caaa6a61a79902210	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	1fb064d93b3ffd05c2fb19ef430a4aa1	flag-o-matic	02908f00f002f0f07c5b74783d778325	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	pam	3e788d86170dfcd5b06824d898315e18	portability	2b88d3ecc35035a3b8ab628b49cafb0e	savedconfig	e6948c872ff47e15a10e5ad1be15c18e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	user	8bc2845510e2109af75e3eeac607ec81
+_eclasses_=desktop	b1d22ac8bdd4679ab79c71aca235009d	epatch	cb17fbe94a2c43cbc0f8e76abf15479a	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	d0939f99dd528dd0c5ec25284877bf5c	ltprune	22f9f14d105434e9c400ccac3bbb64ae	multilib	d410501a125f99ffb560b0c523cd3d1e	pam	756a09f72c4cdbb55f2694c95f1e0860	portability	2b88d3ecc35035a3b8ab628b49cafb0e	preserve-libs	ef207dc62baddfddfd39a164d9797648	savedconfig	1de3f25f1039cd1772fbf707ef87dbe3	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	user	875055ddd565382c728563992ae3abf7	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf
 _md5_=66063e79eee02498bb5589030aa38bcc

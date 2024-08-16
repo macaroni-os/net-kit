@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install postinst setup
-DEPEND=dev-perl/Danga-Socket dev-perl/Sys-Syscall
+DEPEND=dev-perl/Danga-Socket dev-perl/Sys-Syscall sys-apps/shadow
 DESCRIPTION=BitTorrent client, written in Perl and is designed to run as a daemon
 EAPI=4
 HOMEPAGE=http://bitflu.workaround.ch
@@ -8,5 +8,5 @@ LICENSE=Artistic-2 GPL-2
 RDEPEND=dev-perl/Danga-Socket dev-perl/Sys-Syscall
 SLOT=0
 SRC_URI=http://bitflu.workaround.ch/bitflu/bitflu-1.50.tgz
-_eclasses_=user	8bc2845510e2109af75e3eeac607ec81
+_eclasses_=user	875055ddd565382c728563992ae3abf7
 _md5_=889b9bfa262b576bd22a8e860768cc81
