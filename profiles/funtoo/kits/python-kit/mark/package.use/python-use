@@ -23,7 +23,6 @@
 =net-misc/omniORB-4.1.4-r2 python_single_target_python2_7 python_targets_python2_7
 =net-misc/omniORB-4.2.1_p2 python_single_target_python2_7 python_targets_python2_7
 =net-misc/python-x2go-0.5.0.6 python_single_target_python2_7 python_targets_python2_7
-=net-misc/s3cmd-1.6.1 python_single_target_python2_7 python_targets_python2_7
 =net-p2p/bittornado-0.3.18-r4 python_single_target_python2_7 python_targets_python2_7
 mail-client/alot python_single_target_python2_7 python_targets_python2_7
 mail-filter/spambayes python_single_target_python2_7 python_targets_python2_7
