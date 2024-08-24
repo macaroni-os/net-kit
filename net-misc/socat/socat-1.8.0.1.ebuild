@@ -6,7 +6,7 @@ inherit flag-o-matic toolchain-funcs
 
 DESCRIPTION="Multipurpose relay (SOcket CAT)"
 HOMEPAGE="http://www.dest-unreach.org/socat/ https://repo.or.cz/socat.git"
-SRC_URI="http://www.dest-unreach.org/socat/download/socat-1.8.0.0.tar.bz2 -> socat-1.8.0.0.tar.bz2"
+SRC_URI="http://www.dest-unreach.org/socat/download/socat-1.8.0.1.tar.bz2 -> socat-1.8.0.1.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
