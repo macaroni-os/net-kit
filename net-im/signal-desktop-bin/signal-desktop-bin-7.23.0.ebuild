@@ -9,7 +9,7 @@ inherit pax-utils unpacker xdg
 DESCRIPTION="Allows you to send and receive messages of Signal Messenger on your computer"
 HOMEPAGE="https://signal.org/
 	https://github.com/signalapp/Signal-Desktop"
-SRC_URI="https://updates.signal.org/desktop/apt/pool/s/signal-desktop/signal-desktop_7.22.2_amd64.deb -> signal-desktop_7.22.2_amd64.deb"
+SRC_URI="https://updates.signal.org/desktop/apt/pool/s/signal-desktop/signal-desktop_7.23.0_amd64.deb -> signal-desktop_7.23.0_amd64.deb"
 
 LICENSE="GPL-3 MIT MIT-with-advertising BSD-1 BSD-2 BSD Apache-2.0 ISC openssl ZLIB APSL-2 icu Artistic-2 LGPL-2.1"
 SLOT="0"
