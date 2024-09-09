@@ -10,6 +10,6 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/openssl:= tcpd? ( sys-apps/tcp-wrappers ) selinux? ( sec-policy/selinux-stunnel ) stunnel3? ( dev-lang/perl ) virtual/tmpfiles
 RESTRICT=!test? ( test )
 SLOT=0
-SRC_URI=https://www.stunnel.org/archive/5.x/stunnel-5.72.tar.gz -> stunnel-5.72.tar.gz
+SRC_URI=https://www.stunnel.org/archive/5.x/stunnel-5.73.tar.gz -> stunnel-5.73.tar.gz
 _eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	python-any-r1	54a3178500786b0a7ede4a23b7f2a6ad	python-utils-r1	d3f9ec72badd0291b655682d67876adc	ssl-cert	3816b162ffb7dfb2d2ab9be0a43f200d	tmpfiles	6f14f7c8fb6f63585daa89581247c82c	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	user	875055ddd565382c728563992ae3abf7
-_md5_=fb0658aa3c28f221d0e85f19d44a4cb1
+_md5_=fbb1db7fdc91a17891b4b854ca7dee1a
