@@ -348,8 +348,8 @@ EGO_SUM=(
 	"github.com/klauspost/pgzip v1.2.6/go.mod"
 	"github.com/klauspost/readahead v1.4.0"
 	"github.com/klauspost/readahead v1.4.0/go.mod"
-	"github.com/klauspost/reedsolomon v1.12.3"
-	"github.com/klauspost/reedsolomon v1.12.3/go.mod"
+	"github.com/klauspost/reedsolomon v1.12.4"
+	"github.com/klauspost/reedsolomon v1.12.4/go.mod"
 	"github.com/konsorten/go-windows-terminal-sequences v1.0.1/go.mod"
 	"github.com/kr/fs v0.1.0"
 	"github.com/kr/fs v0.1.0/go.mod"
@@ -435,8 +435,8 @@ EGO_SUM=(
 	"github.com/minio/kms-go/kms v0.4.0/go.mod"
 	"github.com/minio/madmin-go/v3 v3.0.66"
 	"github.com/minio/madmin-go/v3 v3.0.66/go.mod"
-	"github.com/minio/mc v0.0.0-20240826104958-a55d9a8d17da"
-	"github.com/minio/mc v0.0.0-20240826104958-a55d9a8d17da/go.mod"
+	"github.com/minio/mc v0.0.0-20240909075310-04c5116c9bdf"
+	"github.com/minio/mc v0.0.0-20240909075310-04c5116c9bdf/go.mod"
 	"github.com/minio/md5-simd v1.1.2"
 	"github.com/minio/md5-simd v1.1.2/go.mod"
 	"github.com/minio/minio-go/v6 v6.0.46/go.mod"
@@ -788,8 +788,8 @@ EGO_SUM=(
 	"golang.org/x/sys v0.17.0/go.mod"
 	"golang.org/x/sys v0.18.0/go.mod"
 	"golang.org/x/sys v0.21.0/go.mod"
-	"golang.org/x/sys v0.24.0"
-	"golang.org/x/sys v0.24.0/go.mod"
+	"golang.org/x/sys v0.25.0"
+	"golang.org/x/sys v0.25.0/go.mod"
 	"golang.org/x/term v0.0.0-20201117132131-f5c789dd3221/go.mod"
 	"golang.org/x/term v0.0.0-20201126162022-7de9c90e9dd1/go.mod"
 	"golang.org/x/term v0.0.0-20210927222741-03fcf44c2211/go.mod"
@@ -888,8 +888,8 @@ EGO_SKIP_TIDY=1
 DESCRIPTION="An Amazon S3 compatible object storage server"
 HOMEPAGE="https://min.io/ https://github.com/minio/minio"
 SRC_URI="
-https://api.github.com/repos/minio/minio/tarball/RELEASE.2024-09-09T16-59-28Z -> minio-RELEASE.2024-09-09T16-59-28Z.tar.gz
-https://distfiles.macaronios.org/26/45/0b/26450b6895ee02bd3e07cbb5f2bc71ab283dda7fb8e0d3253c428e65f2f1d17d56541e8dff489442dad6ce491c2717d0ba2f6f4649cc784cd407c9a4a0173d1c -> minio-2024.09.09.16.59.28-funtoo-go-bundle-f3372ba00662ad6c81f657d487a1052892a5a6374c154dc579fe2c713e998bc8aabc2d035fffff05372ba8aa5bf7a99ae41cdbee0a4f5f7781f57a28e22cad8e.tar.gz"
+https://api.github.com/repos/minio/minio/tarball/RELEASE.2024-09-13T20-26-02Z -> minio-RELEASE.2024-09-13T20-26-02Z.tar.gz
+https://distfiles.macaronios.org/e9/03/21/e90321954a128b4e0b53327503b0f9cfe539056d35472f63a7a61703b07361683ce52eb1fdab3a11c7891e727f338bcc82fb0a919d0f87002f2f7510a81f10e8 -> minio-2024.09.13.20.26.02-funtoo-go-bundle-3c0ad3190347427fa35ac015e0d0a2624db0fba5b948683ab0822323e37c07c8f876bea7b7de3b10be1d541a96bf9978ff1be5b7c010189e5e31ad41648dee3c.tar.gz"
 
 MY_PV="$(ver_cut 1-3)T$(ver_cut 4-7)Z"
 MY_PV=${MY_PV//./-}
