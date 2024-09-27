@@ -10,7 +10,7 @@ MY_P="${MY_PN}-${PV}"
 S="${WORKDIR}/${MY_P}"
 DESCRIPTION="Enterprise client-server fax package for class 1 and 2 fax modems"
 HOMEPAGE="https://hylafax.sourceforge.io/"
-SRC_URI="https://download.sourceforge.net/hylafax/hylafax-7.0.8.tar.gz -> hylafax-7.0.8.tar.gz"
+SRC_URI="https://download.sourceforge.net/hylafax/hylafax-7.0.9.tar.gz -> hylafax-7.0.9.tar.gz"
 
 SLOT="0"
 LICENSE="hylafaxplus"
