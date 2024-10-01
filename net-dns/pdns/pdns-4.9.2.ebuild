@@ -8,7 +8,7 @@ inherit flag-o-matic lua-single user autotools
 
 DESCRIPTION="The PowerDNS Daemon"
 HOMEPAGE="https://www.powerdns.com/"
-SRC_URI="https://downloads.powerdns.com/releases/pdns-4.9.1.tar.bz2 -> pdns-4.9.1.tar.bz2"
+SRC_URI="https://downloads.powerdns.com/releases/pdns-4.9.2.tar.bz2 -> pdns-4.9.2.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
