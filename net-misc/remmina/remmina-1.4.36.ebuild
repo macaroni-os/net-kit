@@ -6,7 +6,7 @@ inherit cmake xdg
 
 DESCRIPTION="A GTK+ RDP, SPICE, VNC and SSH client"
 HOMEPAGE="https://remmina.org/"
-SRC_URI="https://gitlab.com/Remmina/Remmina/-/archive/v1.4.35/Remmina-v1.4.35.tar.gz -> Remmina-1.4.35.tar.gz"
+SRC_URI="https://gitlab.com/Remmina/Remmina/-/archive/v1.4.36/Remmina-v1.4.36.tar.gz -> Remmina-1.4.36.tar.gz"
 
 LICENSE="GPL-2+-with-openssl-exception"
 SLOT="0"
