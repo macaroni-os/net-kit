@@ -6,7 +6,7 @@ inherit autotools linux-info
 
 DESCRIPTION="Linux kernel (3.13+) firewall, NAT and packet mangling tools"
 HOMEPAGE="https://netfilter.org/projects/nftables/"
-SRC_URI="https://www.netfilter.org/pub/nftables/nftables-1.1.0.tar.xz -> nftables-1.1.0.tar.xz
+SRC_URI="https://www.netfilter.org/pub/nftables/nftables-1.1.1.tar.xz -> nftables-1.1.1.tar.xz
 "
 
 LICENSE="GPL-2"
