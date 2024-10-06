@@ -6,7 +6,7 @@ inherit fcaps multilib user
 
 DESCRIPTION="An SMTP client and SMTP plugin for mail user agents such as Mutt"
 HOMEPAGE="https://marlam.de/msmtp/"
-SRC_URI="https://marlam.de/msmtp/releases/msmtp-1.8.26.tar.xz -> msmtp-1.8.26.tar.xz"
+SRC_URI="https://marlam.de/msmtp/releases/msmtp-1.8.27.tar.xz -> msmtp-1.8.27.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
