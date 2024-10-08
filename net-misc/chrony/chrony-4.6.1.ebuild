@@ -7,7 +7,7 @@ inherit edo tmpfiles toolchain-funcs user
 DESCRIPTION="NTP client and server programs"
 HOMEPAGE="https://chrony-project.org/"
 
-SRC_URI="https://github.com/mlichvar/chrony/tarball/113d1134d14e9b5dd8133b934eb853aa7f4f7e38 -> chrony-4.6-113d113.tar.gz"
+SRC_URI="https://github.com/mlichvar/chrony/tarball/b0ac5992fb891d62c4aa26162b890042320df360 -> chrony-4.6.1-b0ac599.tar.gz"
 
 KEYWORDS="*"
 
@@ -55,7 +55,7 @@ PATCHES=(
 	"${FILESDIR}"/"${PN}-4.5-no-installing-docs.patch"
 )
 
-S="${WORKDIR}/mlichvar-chrony-113d113"
+S="${WORKDIR}/mlichvar-chrony-b0ac599"
 
 pkg_setup() {
 	if use caps; then
