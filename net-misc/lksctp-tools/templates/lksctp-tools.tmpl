@@ -1,17 +1,16 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI="7"
 
-inherit eutils multilib flag-o-matic autotools autotools-utils linux-info
+inherit flag-o-matic autotools linux-info
 
 DESCRIPTION="Tools for Linux Kernel Stream Control Transmission Protocol implementation"
 HOMEPAGE="http://lksctp.sourceforge.net/"
-SRC_URI="mirror://sourceforge/lksctp/${P}.tar.gz"
+SRC_URI="{{ src_uri }}"
 
 LICENSE="|| ( GPL-2+ LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="alpha amd64 arm arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 s390 ~sh ~sparc x86"
+KEYWORDS="*"
 IUSE="kernel_linux static-libs"
 
 # This is only supposed to work with Linux to begin with.
@@ -23,26 +22,36 @@ REQUIRED_USE="kernel_linux"
 CONFIG_CHECK="~IP_SCTP"
 WARNING_IP_SCTP="CONFIG_IP_SCTP:\tis not set when it should be."
 
+DOCS=( AUTHORS ChangeLog INSTALL NEWS README ROADMAP )
+
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.0.8-prefix.patch #181602
+	default
+
 	eautoreconf
 }
 
 src_configure() {
 	append-flags -fno-strict-aliasing
 
-	autotools-utils_src_configure
+	local myeconfargs=(
+		--docdir="${EPREFIX%/}"/usr/share/doc/${PF}
+		--enable-shared
+		$(use_enable static-libs static)
+	)
+
+	econf "${myeconfargs[@]}"
 }
 
-DOCS=( AUTHORS ChangeLog INSTALL NEWS README ROADMAP )
-
 src_install() {
-	autotools-utils_src_install
+	default
 
 	dodoc doc/*txt
 	newdoc src/withsctp/README README.withsctp
 
-	# Don't install static library or libtool file, since this is used
-	# only as preloadable library.
-	use static-libs && rm "${D}"/usr/$(get_libdir)/${PN}/*.a
+	find "${ED}" -name '*.la' -delete || die
+	if ! use static-libs ; then
+		find "${ED}" -name "*.a" -delete || die
+	fi
 }
+
+# vim: filetype=ebuild

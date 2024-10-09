@@ -1,17 +1,16 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="6"
+EAPI="7"
 
-inherit flag-o-matic autotools linux-info multilib-minimal
+inherit flag-o-matic autotools linux-info
 
 DESCRIPTION="Tools for Linux Kernel Stream Control Transmission Protocol implementation"
 HOMEPAGE="http://lksctp.sourceforge.net/"
-SRC_URI="https://github.com/sctp/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/sctp/lksctp-tools/tarball/37d5f1225573b91d706a5e547d081f79963a9deb -> lksctp-tools-1.0.21-37d5f12.tar.gz"
 
 LICENSE="|| ( GPL-2+ LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv s390 ~sh sparc ~x86"
+KEYWORDS="*"
 IUSE="kernel_linux static-libs"
 
 # This is only supposed to work with Linux to begin with.
@@ -25,17 +24,13 @@ WARNING_IP_SCTP="CONFIG_IP_SCTP:\tis not set when it should be."
 
 DOCS=( AUTHORS ChangeLog INSTALL NEWS README ROADMAP )
 
-PATCHES=( "${FILESDIR}"/${P}-install-sctp.h.patch )
-
 src_prepare() {
 	default
 
 	eautoreconf
-
-	multilib_copy_sources
 }
 
-multilib_src_configure() {
+src_configure() {
 	append-flags -fno-strict-aliasing
 
 	local myeconfargs=(
@@ -47,7 +42,7 @@ multilib_src_configure() {
 	econf "${myeconfargs[@]}"
 }
 
-multilib_src_install_all() {
+src_install() {
 	default
 
 	dodoc doc/*txt
@@ -58,3 +53,5 @@ multilib_src_install_all() {
 		find "${ED}" -name "*.a" -delete || die
 	fi
 }
+
+# vim: filetype=ebuild
