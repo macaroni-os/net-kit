@@ -11,8 +11,8 @@ S=${WORKDIR}/${MY_PN}-v${MY_PV}
 DESCRIPTION="The open and composable observability and data visualization platform"
 HOMEPAGE="https://grafana.org https://github.com/grafana/grafana"
 SRC_URI="
-	amd64? ( https://dl.grafana.com/oss/release/grafana-11.2.1.linux-amd64.tar.gz -> grafana-11.2.1.linux-amd64.tar.gz )
-	arm64? ( https://dl.grafana.com/oss/release/grafana-11.2.1.linux-arm64.tar.gz -> grafana-11.2.1.linux-arm64.tar.gz )
+	amd64? ( https://dl.grafana.com/oss/release/grafana-11.2.2.linux-amd64.tar.gz -> grafana-11.2.2.linux-amd64.tar.gz )
+	arm64? ( https://dl.grafana.com/oss/release/grafana-11.2.2.linux-arm64.tar.gz -> grafana-11.2.2.linux-arm64.tar.gz )
 "
 
 LICENSE="AGPL-3"
