@@ -6,7 +6,7 @@ inherit autotools eutils flag-o-matic pam toolchain-funcs user
 
 DESCRIPTION="Lightweight but featured SMTP daemon from OpenBSD"
 HOMEPAGE="https://www.opensmtpd.org"
-SRC_URI="https://www.opensmtpd.org/archives/opensmtpd-7.5.0p0.tar.gz -> opensmtpd-7.5.0p0.tar.gz"
+SRC_URI="https://www.opensmtpd.org/archives/opensmtpd-7.6.0p0.tar.gz -> opensmtpd-7.6.0p0.tar.gz"
 
 LICENSE="ISC BSD BSD-1 BSD-2 BSD-4"
 SLOT="0"
