@@ -6,7 +6,7 @@ inherit cmake
 
 DESCRIPTION="Library implementing the SSH2 protocol"
 HOMEPAGE="https://www.libssh2.org"
-SRC_URI="https://www.libssh2.org/download/libssh2-1.11.0.tar.gz -> libssh2-1.11.0.tar.gz"
+SRC_URI="https://www.libssh2.org/download/libssh2-1.11.1.tar.gz -> libssh2-1.11.1.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
