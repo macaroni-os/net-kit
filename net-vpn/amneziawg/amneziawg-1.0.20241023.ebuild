@@ -6,7 +6,7 @@ inherit linux-mod-r1
 
 DESCRIPTION="AmneziaWG Linux kernel module"
 HOMEPAGE="https://github.com/amnezia-vpn/amneziawg-linux-kernel-module"
-SRC_URI="https://github.com/amnezia-vpn/amneziawg-linux-kernel-module/tarball/6301e3add45c8a42c8c4b40dc32dc1ddebb4401f -> amneziawg-linux-kernel-module-1.0.20241022-6301e3a.tar.gz"
+SRC_URI="https://github.com/amnezia-vpn/amneziawg-linux-kernel-module/tarball/e53879f523ce383d75ccdc4c65d20b7a7e9054df -> amneziawg-linux-kernel-module-1.0.20241023-e53879f.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
