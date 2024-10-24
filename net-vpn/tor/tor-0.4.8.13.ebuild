@@ -8,7 +8,7 @@ MY_PV="$(ver_rs 4 -)"
 MY_PF="${PN}-${MY_PV}"
 DESCRIPTION="Anonymizing overlay network for TCP"
 HOMEPAGE="http://www.torproject.org/"
-SRC_URI="https://dist.torproject.org/tor-0.4.8.12.tar.gz -> tor-0.4.8.12.tar.gz
+SRC_URI="https://dist.torproject.org/tor-0.4.8.13.tar.gz -> tor-0.4.8.13.tar.gz
 "
 S="${WORKDIR}/${MY_PF}"
 
