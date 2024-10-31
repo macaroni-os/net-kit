@@ -604,8 +604,8 @@ EGO_SUM=(
 	"github.com/tidwall/pretty v1.2.0/go.mod"
 	"github.com/tidwall/pretty v1.2.1"
 	"github.com/tidwall/pretty v1.2.1/go.mod"
-	"github.com/tinylib/msgp v1.2.2"
-	"github.com/tinylib/msgp v1.2.2/go.mod"
+	"github.com/tinylib/msgp v1.2.3-0.20241022140105-4558fbf3a223"
+	"github.com/tinylib/msgp v1.2.3-0.20241022140105-4558fbf3a223/go.mod"
 	"github.com/tklauser/go-sysconf v0.3.14"
 	"github.com/tklauser/go-sysconf v0.3.14/go.mod"
 	"github.com/tklauser/numcpus v0.8.0"
@@ -873,8 +873,8 @@ EGO_SKIP_TIDY=1
 DESCRIPTION="An Amazon S3 compatible object storage server"
 HOMEPAGE="https://min.io/ https://github.com/minio/minio"
 SRC_URI="
-https://api.github.com/repos/minio/minio/tarball/RELEASE.2024-10-13T13-34-11Z -> minio-RELEASE.2024-10-13T13-34-11Z.tar.gz
-https://distfiles.macaronios.org/32/3e/64/323e64d9e0ddb00e8ef83ff085877929b4e60f4f612c56f69478f42e790c022a299abd6699a607a68e4482f60a84d2059086240e2141038a2066942d7e9f9587 -> minio-2024.10.13.13.34.11-funtoo-go-bundle-7edcccd4fc17107d6f9d20875966b7ee44d8ad08c0019c62ce7fcdf94699fa3fe5c27496119daae3d1382496f898b33956a420127c31dcd3b7b6e27417f0e50a.tar.gz"
+https://api.github.com/repos/minio/minio/tarball/RELEASE.2024-10-29T16-01-48Z -> minio-RELEASE.2024-10-29T16-01-48Z.tar.gz
+https://distfiles.macaronios.org/1b/15/5d/1b155d1181d28151f937aef0e42f2c65c4143399a66da763f2d1e75f001934f66203180154cb3d7fd330b6696d48f957e4ef80f4edcdc9d6456b0a50466bfd91 -> minio-2024.10.29.16.01.48-funtoo-go-bundle-9e1e2dc5e950c40f1ba3a50bb979fc88ad0824e23898da19d400eb312add8a2a910cb992966f8ee963ea7465dd1cb53820c4645a107b7a2700083564febe101f.tar.gz"
 
 MY_PV="$(ver_cut 1-3)T$(ver_cut 4-7)Z"
 MY_PV=${MY_PV//./-}
