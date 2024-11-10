@@ -24,6 +24,10 @@ WARNING_IP_SCTP="CONFIG_IP_SCTP:\tis not set when it should be."
 
 DOCS=( AUTHORS ChangeLog INSTALL NEWS README ROADMAP )
 
+post_src_unpack() {
+	mv sctp-lksctp-tools-* "${S}"
+}
+
 src_prepare() {
 	default
 
