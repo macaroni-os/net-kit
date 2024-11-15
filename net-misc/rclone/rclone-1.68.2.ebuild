@@ -281,8 +281,8 @@ EGO_SUM=(
 	"github.com/gofrs/flock v0.8.1/go.mod"
 	"github.com/gogo/protobuf v1.3.2"
 	"github.com/gogo/protobuf v1.3.2/go.mod"
-	"github.com/golang-jwt/jwt/v4 v4.5.0"
-	"github.com/golang-jwt/jwt/v4 v4.5.0/go.mod"
+	"github.com/golang-jwt/jwt/v4 v4.5.1"
+	"github.com/golang-jwt/jwt/v4 v4.5.1/go.mod"
 	"github.com/golang-jwt/jwt/v5 v5.2.1"
 	"github.com/golang-jwt/jwt/v5 v5.2.1/go.mod"
 	"github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b/go.mod"
@@ -525,8 +525,8 @@ EGO_SUM=(
 	"github.com/quic-go/quic-go v0.40.1/go.mod"
 	"github.com/rasky/go-xdr v0.0.0-20170124162913-1a41d1a06c93"
 	"github.com/rasky/go-xdr v0.0.0-20170124162913-1a41d1a06c93/go.mod"
-	"github.com/rclone/gofakes3 v0.0.3-0.20240807151802-e80146f8de87"
-	"github.com/rclone/gofakes3 v0.0.3-0.20240807151802-e80146f8de87/go.mod"
+	"github.com/rclone/gofakes3 v0.0.3"
+	"github.com/rclone/gofakes3 v0.0.3/go.mod"
 	"github.com/relvacode/iso8601 v1.3.0"
 	"github.com/relvacode/iso8601 v1.3.0/go.mod"
 	"github.com/rfjakob/eme v1.1.2"
@@ -1066,8 +1066,8 @@ EGO_SUM=(
 go-module_set_globals
 
 KEYWORDS="*"
-SRC_URI="https://github.com/rclone/rclone/tarball/e10e196bd1b430aa6e0eb4c09ecc98a3f09d619b -> rclone-1.68.1-e10e196.tar.gz
-https://distfiles.macaronios.org/7b/c3/9c/7bc39c6d317ca799fd4f15a56600b9898de5c6a5881057a503255c6e36fa781b31bf87c708eccd2116cf6de1f7b42d775e08a07e58833c7065cdc1be59b6f1fa -> rclone-1.68.1-funtoo-go-bundle-91192a9bfd9a96c9c4784c235292df9886005b9b08f6101da1418ceded1ac0414ca1573c9d092e5d424c2c8804250f57f2e4c99cbfb241f7fba0e05abad9028c.tar.gz"
+SRC_URI="https://github.com/rclone/rclone/tarball/86b02e1b9075176a341296c8c729693386f56ede -> rclone-1.68.2-86b02e1.tar.gz
+https://distfiles.macaronios.org/4e/fa/fd/4efafd00fc95f8e1f8287b0d429bb17a8985e6c25d9abacd988840da6f1bcf63835bf9c0a45f9f4203aed0c61dc20ad14841becad424f95717d24c15626c7eff -> rclone-1.68.2-funtoo-go-bundle-afb4b8243ad93b24ec20fdabeddd5637a7989bdc9d7d0b8ab34e34ce87d065808f8c68a062b88435ff9e95833a2291892b13b83c476197c918dbd55c03b3dee6.tar.gz"
 
 DESCRIPTION="A program to sync files to and from various cloud storage providers"
 HOMEPAGE="https://rclone.org/"
