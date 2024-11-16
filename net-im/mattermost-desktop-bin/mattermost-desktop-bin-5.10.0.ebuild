@@ -11,10 +11,10 @@ DESCRIPTION="Mattermost Desktop application"
 HOMEPAGE="https://mattermost.com/"
 
 SRC_URI="amd64? (
-  https://github.com/mattermost/desktop/releases/download/v5.9.0/mattermost-desktop-5.9.0-linux-x64.tar.gz -> mattermost-desktop-5.9.0-linux-x64.tar.gz
+  https://github.com/mattermost/desktop/releases/download/v5.10.0/mattermost-desktop-5.10.0-linux-x64.tar.gz -> mattermost-desktop-5.10.0-linux-x64.tar.gz
 )
 arm64? (
-  https://github.com/mattermost/desktop/releases/download/v5.9.0/mattermost-desktop-5.9.0-linux-arm64.tar.gz -> mattermost-desktop-5.9.0-linux-arm64.tar.gz
+  https://github.com/mattermost/desktop/releases/download/v5.10.0/mattermost-desktop-5.10.0-linux-arm64.tar.gz -> mattermost-desktop-5.10.0-linux-arm64.tar.gz
 )
 "
 
