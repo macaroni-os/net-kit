@@ -9,7 +9,7 @@ inherit bash-completion-r1 distutils-r1 tmpfiles
 
 DESCRIPTION="Scans log files and bans IPs that show malicious signs"
 HOMEPAGE="https://www.fail2ban.org/"
-SRC_URI="https://api.github.com/repos/fail2ban/fail2ban/tarball/1.1.0 -> fail2ban-1.1.0.tar.gz"
+SRC_URI="https://github.com/fail2ban/fail2ban/tarball/61799e15e1dd4389dea0cc7595da0a287835a177 -> fail2ban-1.1.0-61799e1.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -26,14 +26,7 @@ RDEPEND="
 
 DOCS=( ChangeLog DEVELOP README.md THANKS TODO doc/run-rootless.txt )
 
-src_unpack() {
-	unpack "${A}"
-	mv "${WORKDIR}/fail2ban-fail2ban"* "$S" || die
-}
-
-PATCHES=(
-	"${FILESDIR}"/${PN}-0.11.2-adjust-apache-logs-paths.patch
-)
+S="${WORKDIR}/fail2ban-fail2ban-61799e1"
 
 python_prepare_all() {
 #	default
