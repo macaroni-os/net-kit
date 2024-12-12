@@ -27,10 +27,6 @@ RDEPEND="
 DOCS=( ChangeLog DEVELOP README.md THANKS TODO doc/run-rootless.txt )
 
 S="${WORKDIR}/fail2ban-fail2ban-61799e1"
-PATCHES=(
-	"${FILESDIR}"/"fail2ban-0.11.2-adjust-apache-logs-paths.patch"
-	"${FILESDIR}"/"fail2ban-1.1.0-match_sshd-session_in_daemon_pattern.patch"
-)
 
 python_prepare_all() {
 #	default
