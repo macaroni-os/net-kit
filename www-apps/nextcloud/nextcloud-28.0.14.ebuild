@@ -6,7 +6,7 @@ inherit webapp
 
 DESCRIPTION="Personal cloud that runs on your own server"
 HOMEPAGE="https://nextcloud.com/"
-SRC_URI="https://download.nextcloud.com/server/releases/nextcloud-30.0.2.tar.bz2 -> nextcloud-30.0.2.tar.bz2"
+SRC_URI="https://download.nextcloud.com/server/releases/nextcloud-28.0.14.tar.bz2 -> nextcloud-28.0.14.tar.bz2"
 LICENSE="AGPL-3"
 
 KEYWORDS="*"
