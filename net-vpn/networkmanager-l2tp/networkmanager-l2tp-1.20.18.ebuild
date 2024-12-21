@@ -9,7 +9,7 @@ inherit eutils gnome.org autotools
 
 DESCRIPTION="NetworkManager L2TP plugin"
 HOMEPAGE="https://github.com/nm-l2tp/network-manager-l2tp"
-SRC_URI="https://api.github.com/repos/nm-l2tp/NetworkManager-l2tp/tarball/1.20.16 -> networkmanager-l2tp-1.20.16.tar.gz"
+SRC_URI="https://api.github.com/repos/nm-l2tp/NetworkManager-l2tp/tarball/1.20.18 -> networkmanager-l2tp-1.20.18.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
