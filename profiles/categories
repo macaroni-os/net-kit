@@ -1,4 +1,6 @@
+mail-mta
 net-dns
 net-libs
+net-mail
 net-misc
 sys-apps
