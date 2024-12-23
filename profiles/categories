@@ -1,5 +1,6 @@
 mail-mta
 net-dns
+net-firewall
 net-libs
 net-mail
 net-misc
