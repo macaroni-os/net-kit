@@ -6,4 +6,5 @@ net-libs
 net-mail
 net-misc
 sys-apps
+virtual
 www-client
