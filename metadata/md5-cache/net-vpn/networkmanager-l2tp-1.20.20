@@ -8,6 +8,6 @@ KEYWORDS=*
 LICENSE=GPL-2
 RDEPEND=>=net-misc/networkmanager-1.8[ppp] dev-libs/dbus-glib net-dialup/ppp[eap-tls] net-dialup/xl2tpd >=dev-libs/glib-2.32 || ( net-vpn/strongswan net-vpn/libreswan ) gnome? ( >=x11-libs/gtk+-3.14:3 >=app-crypt/libsecret-0.18 >=net-libs/libnma-1.8.0 )
 SLOT=0
-SRC_URI=https://api.github.com/repos/nm-l2tp/NetworkManager-l2tp/tarball/1.20.18 -> networkmanager-l2tp-1.20.18.tar.gz
+SRC_URI=https://api.github.com/repos/nm-l2tp/NetworkManager-l2tp/tarball/1.20.20 -> networkmanager-l2tp-1.20.20.tar.gz
 _eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	gnome.org	532d56d07b9eace4831aaa817d2b756a	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=552bcb95b6fe636af366ac524ceb7577
+_md5_=9e60519071deb1b6b32742c76d3f856c
