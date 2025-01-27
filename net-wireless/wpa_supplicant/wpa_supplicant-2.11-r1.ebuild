@@ -12,7 +12,7 @@ KEYWORDS="*"
 SRC_URI="https://w1.fi/releases/wpa_supplicant-2.11.tar.gz -> wpa_supplicant-2.11.tar.gz"
 
 SLOT="0"
-IUSE="ap bindist dbus eap-sim eapol_test fasteap +fils +hs2-0 libressl macsec p2p privsep ps3 qt5 readline selinux smartcard tdls uncommon-eap-types wimax wps kernel_linux kernel_FreeBSD"
+IUSE="ap bindist dbus eap-sim eapol_test fasteap +fils +hs2-0 macsec p2p privsep ps3 qt5 readline selinux smartcard tdls uncommon-eap-types wimax wps kernel_linux"
 
 CDEPEND="dbus? ( sys-apps/dbus )
 	kernel_linux? (
@@ -20,7 +20,6 @@ CDEPEND="dbus? ( sys-apps/dbus )
 		net-wireless/crda
 		eap-sim? ( sys-apps/pcsc-lite )
 	)
-	!kernel_linux? ( net-libs/libpcap )
 	qt5? (
 		dev-qt/qtcore:5
 		dev-qt/qtgui:5
@@ -31,8 +30,7 @@ CDEPEND="dbus? ( sys-apps/dbus )
 		sys-libs/ncurses:0=
 		sys-libs/readline:0=
 	)
-	!libressl? ( >=dev-libs/openssl-1.0.2k:0=[bindist=] )
-	libressl? ( dev-libs/libressl:0= )
+	dev-libs/openssl
 "
 DEPEND="${CDEPEND}
 	virtual/pkgconfig
@@ -211,7 +209,7 @@ src_configure() {
 
 	Kconfig_style_config TLS openssl
 	Kconfig_style_config FST
-	if ! use bindist || use libressl; then
+	if ! use bindist ; then
 		Kconfig_style_config EAP_PWD
 		if use fils; then
 			Kconfig_style_config FILS
@@ -224,8 +222,6 @@ src_configure() {
 		Kconfig_style_config SAE
 		Kconfig_style_config DPP
 		Kconfig_style_config SUITEB192
-	fi
-	if ! use bindist && ! use libressl; then
 		Kconfig_style_config SUITEB
 	fi
 
@@ -407,15 +403,8 @@ pkg_postinst() {
 	fi
 
 	if use bindist; then
-		if ! use libressl; then
-			ewarn "Using bindist use flag presently breaks WPA3 (specifically SAE, OWE, DPP, and FILS)."
-			ewarn "This is incredibly undesirable"
-		fi
-	fi
-	if use libressl; then
-		ewarn "Libressl doesn't support SUITEB (part of WPA3)"
-		ewarn "but it does support SUITEB192 (the upgraded strength version of the same)"
-		ewarn "You probably don't care.  Patches welcome"
+		ewarn "Using bindist use flag presently breaks WPA3 (specifically SAE, OWE, DPP, and FILS)."
+		ewarn "This is incredibly undesirable"
 	fi
 
 	# Mea culpa, feel free to remove that after some time --mgorny.
@@ -433,3 +422,5 @@ pkg_postinst() {
 
 	systemd_reenable wpa_supplicant.service
 }
+
+# vim: filetype=ebuild
