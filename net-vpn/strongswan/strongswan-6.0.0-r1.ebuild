@@ -198,7 +198,6 @@ src_install() {
 	local dir_ugid
 	if use non-root; then
 		fowners ${UGID}:${UGID} \
-			/etc/ipsec.conf \
 			/etc/strongswan.conf
 
 		dir_ugid="${UGID}"
@@ -299,7 +298,7 @@ pkg_postinst() {
 		elog "For example (the default case):"
 		elog "/etc/sudoers:"
 		elog "  ipsec ALL=(ALL) NOPASSWD: SETENV: /usr/sbin/ipsec"
-		elog "Under the specific connection block in /etc/ipsec.conf:"
+		elog "Under the specific connection block:"
 		elog "  leftupdown=\"sudo -E ipsec _updown iptables\""
 		elog
 	fi
