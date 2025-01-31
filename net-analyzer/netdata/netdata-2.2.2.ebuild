@@ -8,7 +8,7 @@ inherit autotools fcaps linux-info python-r1 systemd user
 DESCRIPTION="Linux real time system monitoring, done right!"
 HOMEPAGE="https://github.com/netdata/netdata https://my-netdata.io/"
 LICENSE="GPL-3+ MIT BSD"
-SRC_URI="https://github.com/netdata/netdata/releases/download/v2.2.1/netdata-v2.2.1.tar.gz -> netdata-v2.2.1.tar.gz"
+SRC_URI="https://github.com/netdata/netdata/releases/download/v2.2.2/netdata-v2.2.2.tar.gz -> netdata-v2.2.2.tar.gz"
 
 SLOT="0"
 KEYWORDS="*"
