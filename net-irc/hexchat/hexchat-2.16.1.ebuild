@@ -11,7 +11,7 @@ DESCRIPTION="Graphical IRC client based on XChat"
 HOMEPAGE="https://hexchat.github.io/"
 
 #SRC_URI="https://dl.hexchat.net/${PN}/${P}.tar.xz"
-SRC_URI="https://dl.hexchat.net/hexchat//hexchat-2.16.1.tar.xz -> hexchat-2.16.1.tar.xz"
+SRC_URI="https://dl.hexchat.net/hexchat/hexchat-2.16.1.tar.xz -> hexchat-2.16.1.tar.xz"
 KEYWORDS="*"
 
 LICENSE="GPL-2 plugin-fishlim? ( MIT )"
