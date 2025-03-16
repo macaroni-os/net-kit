@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install prepare setup test unpack
+DEPEND=ruby_targets_ruby30? ( test? ( >=www-apps/jekyll-2[ruby_targets_ruby30(-)] ) ) test? ( ruby_targets_ruby30? ( >=dev-ruby/addressable-2.4.0[ruby_targets_ruby30(-)] ) ) ruby_targets_ruby30? ( dev-lang/ruby:3.0 ) ruby_targets_ruby30? ( test? ( dev-ruby/rspec:3[ruby_targets_ruby30(-)] ) ) ruby_targets_ruby30? ( virtual/rubygems[ruby_targets_ruby30(-)] ) test? ( ruby_targets_ruby30? ( virtual/rubygems[ruby_targets_ruby30(-)] ) )
+DESCRIPTION=Automatically generate a sitemap.xml for your Jekyll site
+EAPI=5
+HOMEPAGE=https://github.com/jekyll/jekyll-sitemap
+IUSE=test ruby_targets_ruby23 ruby_targets_ruby24 ruby_targets_ruby25 test test
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=ruby_targets_ruby30? ( >=dev-ruby/addressable-2.4.0[ruby_targets_ruby30(-)] ) ruby_targets_ruby30? ( dev-lang/ruby:3.0 ) ruby_targets_ruby30? ( virtual/rubygems[ruby_targets_ruby30(-)] )
+REQUIRED_USE=|| ( ruby_targets_ruby30 )
+RESTRICT=!test? ( test ) !test? ( test ) !test? ( test )
+SLOT=0
+SRC_URI=https://github.com/jekyll/jekyll-sitemap/archive/v0.13.0.tar.gz -> jekyll-sitemap-0.13.0.tar.gz
+_eclasses_=desktop	b1d22ac8bdd4679ab79c71aca235009d	epatch	cb17fbe94a2c43cbc0f8e76abf15479a	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	ltprune	22f9f14d105434e9c400ccac3bbb64ae	multilib	d410501a125f99ffb560b0c523cd3d1e	preserve-libs	ef207dc62baddfddfd39a164d9797648	ruby-fakegem	2e0373a7f4e043d3d58231990b0bf65f	ruby-ng	b696b71528105a90c4e44b101bd7f8ed	ruby-utils	3791942eec3367882de76288f91c9d78	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf
+_md5_=a865e0c547bba8235546abd65d1fee14
