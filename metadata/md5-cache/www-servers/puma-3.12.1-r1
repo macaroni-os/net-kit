@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install prepare setup test unpack
+DEPEND=dev-libs/openssl:0 test? ( net-misc/curl ) ruby_targets_ruby30? ( virtual/ruby-ssl[ruby_targets_ruby30(-)] test? ( dev-ruby/rack[ruby_targets_ruby30(-)] >=dev-ruby/minitest-5.9:5[ruby_targets_ruby30(-)] >=dev-ruby/test-unit-3.0:2[ruby_targets_ruby30(-)] ) ) ruby_targets_ruby30? ( dev-lang/ruby:3.0 ) ruby_targets_ruby30? ( doc? ( dev-ruby/rdoc[ruby_targets_ruby30(-)] ) ) ruby_targets_ruby30? ( test? ( dev-ruby/rake[ruby_targets_ruby30(-)] ) ) ruby_targets_ruby30? ( virtual/rubygems[ruby_targets_ruby30(-)] ) test? ( ruby_targets_ruby30? ( virtual/rubygems[ruby_targets_ruby30(-)] ) )
+DESCRIPTION=a simple, fast, threaded, and highly concurrent HTTP 1.1 server for Ruby/Rack
+EAPI=6
+HOMEPAGE=https://puma.io/
+IUSE=ruby_targets_ruby24 ruby_targets_ruby25 ruby_targets_ruby26 doc test test
+KEYWORDS=~amd64 ~arm ~arm64 ~hppa ~ppc ~ppc64 ~x86
+LICENSE=BSD
+RDEPEND=dev-libs/openssl:0 ruby_targets_ruby30? ( dev-lang/ruby:3.0 ) ruby_targets_ruby30? ( virtual/rubygems[ruby_targets_ruby30(-)] )
+REQUIRED_USE=|| ( ruby_targets_ruby30 )
+RESTRICT=!test? ( test ) !test? ( test )
+SLOT=3
+SRC_URI=https://github.com/puma/puma/archive/v3.12.1.tar.gz -> puma-3.12.1.tar.gz
+_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	multilib	d410501a125f99ffb560b0c523cd3d1e	ruby-fakegem	2e0373a7f4e043d3d58231990b0bf65f	ruby-ng	b696b71528105a90c4e44b101bd7f8ed	ruby-utils	3791942eec3367882de76288f91c9d78	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=7d332447616a6f0ecd59e89ad0ea22dc
