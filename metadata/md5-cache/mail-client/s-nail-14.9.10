@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install
+DEPEND=idn? ( net-dns/libidn ) net? ( kerberos? ( virtual/krb5 ) ssl? ( || ( dev-libs/openssl:0 dev-libs/libressl ) ) ) sys-libs/ncurses !mail-client/mailx !net-mail/mailutils !net-mail/nail
+DESCRIPTION=Actively maintained fork of heirloom-mailx, a CLI email client
+EAPI=6
+HOMEPAGE=https://www.sdaoden.eu/code.html
+IUSE=+net +ssl +idn kerberos
+KEYWORDS=~amd64 ~x86
+LICENSE=MIT BSD BSD-2 BSD-4 RSA
+RDEPEND=idn? ( net-dns/libidn ) net? ( kerberos? ( virtual/krb5 ) ssl? ( || ( dev-libs/openssl:0 dev-libs/libressl ) ) ) sys-libs/ncurses !mail-client/mailx !net-mail/mailutils !net-mail/nail
+REQUIRED_USE=!net? ( !kerberos !ssl )
+SLOT=0
+SRC_URI=https://www.sdaoden.eu/downloads/s-nail-14.9.10.tar.xz
+_eclasses_=desktop	b1d22ac8bdd4679ab79c71aca235009d	epatch	cb17fbe94a2c43cbc0f8e76abf15479a	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	ltprune	22f9f14d105434e9c400ccac3bbb64ae	multilib	d410501a125f99ffb560b0c523cd3d1e	preserve-libs	ef207dc62baddfddfd39a164d9797648	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf
+_md5_=a82c6c9d02327d9cf1d9e92c583235bc
