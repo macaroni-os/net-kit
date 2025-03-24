@@ -1,0 +1,11 @@
+DEFINED_PHASES=configure install unpack
+DESCRIPTION=Website pre-processor features tag substitution and page ordering
+EAPI=7
+HOMEPAGE=https://sourceforge.net/projects/wsmake/
+IUSE=examples
+KEYWORDS=~x86 ~amd64
+LICENSE=GPL-2+ Artistic
+SLOT=0
+SRC_URI=mirror://sourceforge/wsmake/wsmake-0.6.4.tar.bz2
+_eclasses_=multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=8ce3f331385986a92f3e31db9e425370

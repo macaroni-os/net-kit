@@ -1,0 +1,12 @@
+BDEPEND=>=dev-lang/go-1.21 >=dev-lang/go-1.12 app-arch/unzip
+DEFINED_PHASES=compile install postinst prepare unpack
+DESCRIPTION=CoreDNS is a DNS server that chains plugins
+EAPI=7
+HOMEPAGE=https://coredns.io/ https://github.com/coredns/coredns
+KEYWORDS=*
+LICENSE=Apache-2.0
+RESTRICT=strip
+SLOT=0
+SRC_URI=https://github.com/coredns/coredns/tarball/51e11f166ef6c247a78e9e15468647c593b79b9f -> coredns-1.12.0-51e11f1.tar.gz https://distfiles.macaronios.org/42/f8/77/42f8776b6866330cc2653ce989cdf70a18b1b072bd539a7d54346081f3c859480bf64bc198dae30a1ed495959416d456b63a1a5611bded061b5d6c2c1c94a937 -> coredns-1.12.0-funtoo-go-bundle-22a5c9bf6b1fa7fdf6ba493fa57174e1e403ca921d22ab958cd55e8512c5b609c4240c7d98163372f56de57d52c133f43d0f7e2a79022b5f9a3a161e20405776.tar.gz
+_eclasses_=go-module	cb10a443c46556a15ed035d7a99128e8	xdg-utils	14d00d009167652b1fa363e55effe213
+_md5_=eebd1266ac0208968377dea9283dcaf6

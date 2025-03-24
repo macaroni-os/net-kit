@@ -1,0 +1,13 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl] virtual/pkgconfig
+DEFINED_PHASES=compile install setup unpack
+DEPEND=dev-db/sqlite gd? ( media-libs/gd[png] ) test? ( dev-libs/check ) sys-apps/shadow
+DESCRIPTION=Console-based network traffic monitor that keeps statistics of network usage
+EAPI=7
+HOMEPAGE=https://humdi.net/vnstat/
+IUSE=gd selinux test
+LICENSE=GPL-2
+PROPERTIES=live
+RDEPEND=dev-db/sqlite gd? ( media-libs/gd[png] ) selinux? ( sec-policy/selinux-vnstatd )
+SLOT=0
+_eclasses_=git-r3	7dcb8a92f5a091f13e82494fa317ca4b	multilib	d410501a125f99ffb560b0c523cd3d1e	systemd	71fd8d2065d102753fb9e4d20eaf3e9f	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	user	875055ddd565382c728563992ae3abf7
+_md5_=3bc17705b7bc62d4df2e6d94726cb79e
