@@ -1,0 +1,13 @@
+BDEPEND=>=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
+DEFINED_PHASES=compile install prepare
+DEPEND=x11-libs/gtk+:2 dev-libs/glib:2 net-libs/libnet:1.1
+DESCRIPTION=A simple GTK/command line TCP/IP packet generator
+EAPI=7
+HOMEPAGE=http://gspoof.sourceforge.net/
+KEYWORDS=amd64 ~ppc x86
+LICENSE=GPL-2
+RDEPEND=x11-libs/gtk+:2 dev-libs/glib:2 net-libs/libnet:1.1
+SLOT=0
+SRC_URI=http://gspoof.sourceforge.net/src/gspoof-3.2.tar.gz
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=37f4a11470274c8a20c5488e20815c53
