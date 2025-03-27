@@ -1,0 +1,14 @@
+BDEPEND=virtual/pkgconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
+DEFINED_PHASES=configure install postinst postrm preinst prepare
+DEPEND=dev-libs/glib:2= dev-libs/gmime:3.0= >=dev-libs/xapian-1.4:= emacs? ( >=app-editors/emacs-24.4:* ) guile? ( >=dev-scheme/guile-2.2:* ) mug? ( net-libs/webkit-gtk:4= x11-libs/gtk+:3= )
+DESCRIPTION=Set of tools to deal with Maildirs, in particular, searching and indexing
+EAPI=7
+HOMEPAGE=https://www.djcbsoftware.nl/code/mu/ https://github.com/djcb/mu
+IUSE=emacs guile mug
+KEYWORDS=*
+LICENSE=GPL-3+
+RDEPEND=dev-libs/glib:2= dev-libs/gmime:3.0= >=dev-libs/xapian-1.4:= emacs? ( >=app-editors/emacs-24.4:* ) guile? ( >=dev-scheme/guile-2.2:* ) mug? ( net-libs/webkit-gtk:4= x11-libs/gtk+:3= )
+SLOT=0
+SRC_URI=https://github.com/djcb/mu/archive/1.4.13.tar.gz -> mu-1.4.13.tar.gz
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	elisp-common	23f47b2e1de7abf387105eddd1318738	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=18f0b98982767b1a5d8c01bd3e6f087e

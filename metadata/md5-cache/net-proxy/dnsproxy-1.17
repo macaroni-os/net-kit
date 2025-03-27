@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install
+DEPEND=dev-libs/libevent
+DESCRIPTION=The dnsproxy daemon is a proxy for DNS queries
+EAPI=7
+HOMEPAGE=https://www.wolfermann.org/dnsproxy.html
+KEYWORDS=amd64 x86
+LICENSE=MIT GPL-2
+RDEPEND=dev-libs/libevent
+SLOT=0
+SRC_URI=https://www.wolfermann.org/dnsproxy-1.17.tar.gz
+_eclasses_=eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	d0939f99dd528dd0c5ec25284877bf5c	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=38e5818b70a10210c2ccddad781fc9d9

@@ -1,0 +1,14 @@
+DEFINED_PHASES=install prepare setup
+DEPEND=app-arch/unzip virtual/pkgconfig sys-apps/shadow
+DESCRIPTION=A Management Controller for Ubiquiti Networks UniFi APs
+EAPI=6
+HOMEPAGE=https://www.ubnt.com
+IUSE=systemd
+KEYWORDS=~amd64
+LICENSE=Apache-1.0 Apache-2.0 BSD-1 BSD-2 BSD CDDL EPL-1.0 GPL-2 LGPL-2.1 LGPL-3 MIT ubiquiti
+RDEPEND=dev-db/mongodb virtual/jre:1.8
+RESTRICT=bindist mirror
+SLOT=0/5.11
+SRC_URI=https://dl.ubnt.com/unifi/5.11.29-633651c4a7/UniFi.unix.zip -> unifi-5.11.29.zip
+_eclasses_=multilib	d410501a125f99ffb560b0c523cd3d1e	systemd	71fd8d2065d102753fb9e4d20eaf3e9f	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	user	875055ddd565382c728563992ae3abf7
+_md5_=1673feacaea48b26bdf96c746d04a419

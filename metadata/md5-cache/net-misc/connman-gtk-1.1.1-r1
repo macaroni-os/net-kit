@@ -1,0 +1,14 @@
+BDEPEND=>=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
+DEFINED_PHASES=configure postinst postrm preinst prepare
+DEPEND=>=dev-util/intltool-0.35.0 sys-devel/gettext virtual/pkgconfig
+DESCRIPTION=GTK GUI for Connman
+EAPI=7
+HOMEPAGE=https://github.com/jgke/connman-gtk
+IUSE=openconnect
+KEYWORDS=*
+LICENSE=GPL-2+
+RDEPEND=>=dev-libs/glib-2.0:2 >=x11-libs/gtk+-3.10:3 openconnect? ( >=net-vpn/openconnect-5.99 ) net-misc/connman
+SLOT=0
+SRC_URI=https://github.com/jgke/connman-gtk/archive/v1.1.1.tar.gz -> connman-gtk-1.1.1.tar.gz
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	gnome2-utils	532371cfcba45b2ab0d2950547c97d95	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg-utils	14d00d009167652b1fa363e55effe213
+_md5_=f78dfb61cb4e5e4b948e98ec2fd2103c

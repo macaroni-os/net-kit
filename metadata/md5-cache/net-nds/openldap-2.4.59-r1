@@ -1,0 +1,16 @@
+BDEPEND=>=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4 ssl? ( dev-libs/openssl:0 )
+DEFINED_PHASES=compile configure install postinst preinst prepare setup test
+DEPEND=ssl? ( !gnutls? ( >=dev-libs/openssl-1.0.1h-r2:0= ) gnutls? ( >=net-libs/gnutls-2.12.23-r6:= >=dev-libs/libgcrypt-1.5.3:0= ) ) sasl? ( dev-libs/cyrus-sasl:= ) !minimal? ( dev-libs/libltdl sys-fs/e2fsprogs >=dev-db/lmdb-0.9.18:= tcpd? ( sys-apps/tcp-wrappers ) odbc? ( !iodbc? ( dev-db/unixODBC ) iodbc? ( dev-db/libiodbc ) ) perl? ( dev-lang/perl:=[-build(-)] ) samba? ( dev-libs/openssl:0= ) berkdb? ( <sys-libs/db-6.0:= || ( sys-libs/db:5.3 sys-libs/db:4.8 ) ) smbkrb5passwd? ( dev-libs/openssl:0= kerberos? ( app-crypt/heimdal ) ) kerberos? ( virtual/krb5 kinit? ( !app-crypt/heimdal ) ) cxx? ( dev-libs/cyrus-sasl:= ) ) sys-apps/groff sys-apps/shadow
+DESCRIPTION=LDAP suite of application and development tools
+EAPI=7
+HOMEPAGE=https://www.OpenLDAP.org/
+IUSE=crypt samba tcpd experimental minimal +berkdb overlays perl gnutls iodbc sasl ssl odbc debug ipv6 +syslog selinux static-libs test smbkrb5passwd kerberos kinit pbkdf2 sha2 cxx ssl
+KEYWORDS=*
+LICENSE=OPENLDAP GPL-2
+RDEPEND=ssl? ( !gnutls? ( >=dev-libs/openssl-1.0.1h-r2:0= ) gnutls? ( >=net-libs/gnutls-2.12.23-r6:= >=dev-libs/libgcrypt-1.5.3:0= ) ) sasl? ( dev-libs/cyrus-sasl:= ) !minimal? ( dev-libs/libltdl sys-fs/e2fsprogs >=dev-db/lmdb-0.9.18:= tcpd? ( sys-apps/tcp-wrappers ) odbc? ( !iodbc? ( dev-db/unixODBC ) iodbc? ( dev-db/libiodbc ) ) perl? ( dev-lang/perl:=[-build(-)] ) samba? ( dev-libs/openssl:0= ) berkdb? ( <sys-libs/db-6.0:= || ( sys-libs/db:5.3 sys-libs/db:4.8 ) ) smbkrb5passwd? ( dev-libs/openssl:0= kerberos? ( app-crypt/heimdal ) ) kerberos? ( virtual/krb5 kinit? ( !app-crypt/heimdal ) ) cxx? ( dev-libs/cyrus-sasl:= ) ) selinux? ( sec-policy/selinux-ldap ) virtual/tmpfiles
+REQUIRED_USE=cxx? ( sasl ) pbkdf2? ( ssl ) test? ( berkdb ) ?? ( test minimal )
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://openldap.org/software/download/OpenLDAP/openldap-release/openldap-2.4.59.tgz http://gpl.savoirfairelinux.net/pub/mirrors/openldap/openldap-release/openldap-2.4.59.tgz http://repository.linagora.org/OpenLDAP/openldap-release/openldap-2.4.59.tgz http://mirror.eu.oneandone.net/software/openldap/openldap-release/openldap-2.4.59.tgz mirror://funtoo/rfc2307bis.schema-20140524
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	db-use	501a5d0963e0d17f30260023f292ae8e	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	d0939f99dd528dd0c5ec25284877bf5c	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	preserve-libs	ef207dc62baddfddfd39a164d9797648	ssl-cert	3816b162ffb7dfb2d2ab9be0a43f200d	tmpfiles	6f14f7c8fb6f63585daa89581247c82c	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	user	875055ddd565382c728563992ae3abf7
+_md5_=1e7e38cd73b0e1e94657419c78ff7106
