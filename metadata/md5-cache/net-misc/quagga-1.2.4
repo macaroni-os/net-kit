@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install postinst prepare setup
+DEPEND=caps? ( sys-libs/libcap ) nhrpd? ( net-dns/c-ares:0= ) protobuf? ( dev-libs/protobuf-c:0= ) readline? ( sys-libs/readline:0= pam? ( sys-libs/pam ) ) snmp? ( net-analyzer/net-snmp ) !elibc_glibc? ( dev-libs/libpcre ) sys-apps/gawk sys-devel/libtool:2 test? ( dev-util/dejagnu ) >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4 virtual/pkgconfig sys-apps/shadow
+DESCRIPTION=A free routing daemon replacing Zebra supporting RIP, OSPF and BGP
+EAPI=6
+HOMEPAGE=https://www.quagga.net/
+IUSE=bgpclassless caps fpm doc elibc_glibc ipv6 multipath nhrpd ospfapi pam protobuf +readline snmp tcp-zebra test
+KEYWORDS=alpha amd64 arm hppa ppc ~s390 sparc x86
+LICENSE=GPL-2
+RDEPEND=caps? ( sys-libs/libcap ) nhrpd? ( net-dns/c-ares:0= ) protobuf? ( dev-libs/protobuf-c:0= ) readline? ( sys-libs/readline:0= pam? ( sys-libs/pam ) ) snmp? ( net-analyzer/net-snmp ) !elibc_glibc? ( dev-libs/libpcre ) sys-apps/iproute2 virtual/tmpfiles
+SLOT=0
+SRC_URI=mirror://nongnu/quagga/quagga-1.2.4.tar.gz bgpclassless? ( http://hasso.linux.ee/stuff/patches/quagga/ht-20040304-classless-bgp.patch )
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	desktop	b1d22ac8bdd4679ab79c71aca235009d	epatch	cb17fbe94a2c43cbc0f8e76abf15479a	eqawarn	bb3d80ca38bc542ed397ab65f64256a6	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	d0939f99dd528dd0c5ec25284877bf5c	libtool	f143db5a74ccd9ca28c1234deffede96	ltprune	22f9f14d105434e9c400ccac3bbb64ae	multilib	d410501a125f99ffb560b0c523cd3d1e	pam	756a09f72c4cdbb55f2694c95f1e0860	preserve-libs	ef207dc62baddfddfd39a164d9797648	readme.gentoo-r1	22ae82e140bdd95d17a34fd5fd733190	systemd	71fd8d2065d102753fb9e4d20eaf3e9f	tmpfiles	6f14f7c8fb6f63585daa89581247c82c	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	user	875055ddd565382c728563992ae3abf7	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf
+_md5_=049e8252a80effaca5eadb3198ed8101

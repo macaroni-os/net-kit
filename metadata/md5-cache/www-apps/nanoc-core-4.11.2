@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install prepare setup test unpack
+DEPEND=test? ( app-text/asciidoc app-text/highlight ) test? ( ruby_targets_ruby30? ( dev-ruby/ddmemoize:1[ruby_targets_ruby30(-)] dev-ruby/ddmetrics:1[ruby_targets_ruby30(-)] dev-ruby/ddplugin:1[ruby_targets_ruby30(-)] =dev-ruby/hamster-3*[ruby_targets_ruby30(-)] >=dev-ruby/json_schema-0.19:0[ruby_targets_ruby30(-)] dev-ruby/zeitwerk:1[ruby_targets_ruby30(-)] ) ) ruby_targets_ruby30? ( test? ( dev-ruby/bundler[ruby_targets_ruby30(-)] dev-ruby/rspec:3[ruby_targets_ruby30(-)] dev-ruby/rspec-its[ruby_targets_ruby30(-)] dev-ruby/fuubar[ruby_targets_ruby30(-)] dev-ruby/minitest[ruby_targets_ruby30(-)] dev-ruby/timecop[ruby_targets_ruby30(-)] dev-ruby/yard[ruby_targets_ruby30(-)] ) ) ruby_targets_ruby30? ( dev-lang/ruby:3.0 ) ruby_targets_ruby30? ( doc? ( dev-ruby/rdoc[ruby_targets_ruby30(-)] ) ) ruby_targets_ruby30? ( test? ( dev-ruby/rake[ruby_targets_ruby30(-)] ) ) ruby_targets_ruby30? ( virtual/rubygems[ruby_targets_ruby30(-)] ) test? ( ruby_targets_ruby30? ( virtual/rubygems[ruby_targets_ruby30(-)] ) )
+DESCRIPTION=nanoc is a simple but very flexible static site generator written in Ruby
+EAPI=6
+HOMEPAGE=https://nanoc.ws/
+IUSE=minimal test ruby_targets_ruby24 ruby_targets_ruby25 ruby_targets_ruby26 doc test test
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=ruby_targets_ruby30? ( dev-ruby/ddmemoize:1[ruby_targets_ruby30(-)] dev-ruby/ddmetrics:1[ruby_targets_ruby30(-)] dev-ruby/ddplugin:1[ruby_targets_ruby30(-)] =dev-ruby/hamster-3*[ruby_targets_ruby30(-)] >=dev-ruby/json_schema-0.19:0[ruby_targets_ruby30(-)] dev-ruby/zeitwerk:1[ruby_targets_ruby30(-)] ) ruby_targets_ruby30? ( dev-lang/ruby:3.0 ) ruby_targets_ruby30? ( virtual/rubygems[ruby_targets_ruby30(-)] )
+REQUIRED_USE=|| ( ruby_targets_ruby30 )
+RESTRICT=!test? ( test ) !test? ( test ) !test? ( test )
+SLOT=0
+SRC_URI=https://github.com/nanoc/nanoc/archive/4.11.2.tar.gz -> nanoc-core-4.11.2.tar.gz
+_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	multilib	d410501a125f99ffb560b0c523cd3d1e	ruby-fakegem	2e0373a7f4e043d3d58231990b0bf65f	ruby-ng	b696b71528105a90c4e44b101bd7f8ed	ruby-utils	3791942eec3367882de76288f91c9d78	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=a829fd0a1d577699e787a2a29739752f
