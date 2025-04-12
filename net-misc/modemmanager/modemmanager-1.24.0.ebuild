@@ -6,7 +6,7 @@ inherit meson gnome3 readme.gentoo-r1 udev user vala
 
 DESCRIPTION="Modem and mobile broadband management libraries"
 HOMEPAGE="https://www.freedesktop.org/wiki/Software/ModemManager/"
-SRC_URI="https://gitlab.freedesktop.org/mobile-broadband/ModemManager/-/archive/1.22.0/ModemManager-1.22.0.tar.bz2 -> ModemManager-1.22.0.tar.bz2"
+SRC_URI="https://gitlab.freedesktop.org/mobile-broadband/ModemManager/-/archive/1.24.0/ModemManager-1.24.0.tar.bz2 -> ModemManager-1.24.0.tar.bz2"
 
 LICENSE="GPL-2+"
 SLOT="0/1" # subslot = dbus interface version, i.e. N in org.freedesktop.ModemManager${N}
