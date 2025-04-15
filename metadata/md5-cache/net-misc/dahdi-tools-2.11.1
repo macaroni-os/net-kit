@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install
+DEPEND=dev-libs/newt ppp? ( net-dialup/ppp ) >=net-misc/dahdi-2.5.0 !net-misc/zaptel >=sys-kernel/linux-headers-2.6.35 virtual/libusb:0
+DESCRIPTION=Userspace tools to configure the kernel modules from net-misc/dahdi
+EAPI=6
+HOMEPAGE=http://www.asterisk.org
+IUSE=ppp
+KEYWORDS=~amd64 ~ppc ~ppc64 ~x86
+LICENSE=LGPL-2.1
+RDEPEND=dev-libs/newt ppp? ( net-dialup/ppp ) >=net-misc/dahdi-2.5.0 !net-misc/zaptel >=sys-kernel/linux-headers-2.6.35 virtual/libusb:0
+SLOT=0
+SRC_URI=http://downloads.asterisk.org/pub/telephony/dahdi-tools/releases/dahdi-tools-2.11.1.tar.gz
+_eclasses_=bash-completion-r1	47a7402d95930413ce25ba8d857339bb	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=3c52b6fcb148ad643b112892a815ad26
