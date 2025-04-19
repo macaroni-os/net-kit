@@ -1,3 +1,5 @@
+mail-client
+mail-filter
 mail-mta
 net-analyzer
 net-dialup
@@ -10,6 +12,7 @@ net-mail
 net-misc
 net-nds
 net-p2p
+net-print
 net-proxy
 net-vpn
 net-wireless
