@@ -1,0 +1,14 @@
+BDEPEND=>=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
+DEFINED_PHASES=configure install prepare
+DEPEND=dev-libs/libgcrypt:0= rdma? ( sys-cluster/rdma-core )
+DESCRIPTION=iscsi client library and utilities
+EAPI=7
+HOMEPAGE=https://github.com/sahlberg/libiscsi
+IUSE=rdma static-libs
+KEYWORDS=*
+LICENSE=GPL-2 LGPL-2
+RDEPEND=dev-libs/libgcrypt:0= rdma? ( sys-cluster/rdma-core )
+SLOT=0
+SRC_URI=https://github.com/sahlberg/libiscsi/archive/1.19.0.tar.gz -> libiscsi-1.19.0.tar.gz https://dev.gentoo.org/~sam/distfiles/net-libs/libiscsi/libiscsi-1.19.0-remove-ld-iscsi.patch.bz2
+_eclasses_=autotools	e9ade2787b2f54643c7cdffbfa1cca9c	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=90fb1d0c1c5b181e7ed7df7c353711da

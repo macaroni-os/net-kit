@@ -1,0 +1,10 @@
+DEFINED_PHASES=compile install
+DESCRIPTION=A simple serial console utility that tries to open ttys repeatedly
+EAPI=4
+HOMEPAGE=http://wiki.openmoko.org/wiki/NeoCon
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+SLOT=0
+SRC_URI=https://dev.gentoo.org/~radhermit/distfiles/neocon-20110228.tar.bz2
+_eclasses_=multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=c6deba232f440339ee8274de87a937a5
