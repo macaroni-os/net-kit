@@ -21,6 +21,7 @@ IUSE="cairo test"
 
 RDEPEND="
 	dev-db/sqlite
+	dev-lang/python:2.7=
 	dev-libs/boost:=
 	dev-libs/openssl:=
 	net-libs/http-parser:=
