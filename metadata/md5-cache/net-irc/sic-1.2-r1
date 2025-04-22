@@ -1,0 +1,10 @@
+DEFINED_PHASES=compile install prepare
+DESCRIPTION=An extremly simple IRC client
+EAPI=6
+HOMEPAGE=https://tools.suckless.org/sic
+KEYWORDS=amd64 x86 ~x86-fbsd
+LICENSE=MIT
+SLOT=0
+SRC_URI=https://dl.suckless.org/tools/sic-1.2.tar.gz
+_eclasses_=multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=dc26f45854dcf229930de6f81a23a05a
