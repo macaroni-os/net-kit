@@ -1,0 +1,12 @@
+DEFINED_PHASES=install postinst prepare
+DEPEND=virtual/libusb:0 virtual/pkgconfig
+DESCRIPTION=gobi_loader is a firmware loader for Qualcomm Gobi USB chipsets
+EAPI=6
+HOMEPAGE=https://www.codon.org.uk/~mjg59/gobi_loader/
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=virtual/libusb:0
+SLOT=0
+SRC_URI=https://www.codon.org.uk/~mjg59/gobi_loader/download/gobi_loader-0.7.tar.gz
+_eclasses_=multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	udev	7752f306eec7b286d00bdb47b763e7ac
+_md5_=6c66d780597a3f7a5a63a8e83037bf38
