@@ -1,0 +1,9 @@
+qbt:
+  generator: github-1
+  packages:
+    - qbittorrent:
+        github:
+          repo: qBittorrent
+          query: tags
+          release: '4.6.7'
+          match: ^release-([0-9.]+)$
