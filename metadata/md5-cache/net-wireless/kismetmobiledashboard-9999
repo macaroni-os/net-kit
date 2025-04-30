@@ -1,0 +1,12 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile install unpack
+DEPEND=net-wireless/kismet
+DESCRIPTION=Mobile UI for kismet
+EAPI=7
+HOMEPAGE=https://github.com/elkentaro/KismetMobileDashboard
+LICENSE=GPL-2
+PROPERTIES=live
+RDEPEND=net-wireless/kismet
+SLOT=0
+_eclasses_=git-r3	7dcb8a92f5a091f13e82494fa317ca4b
+_md5_=80239793d3a2f586317ee509434b2b3a
