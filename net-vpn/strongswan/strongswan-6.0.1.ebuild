@@ -1,7 +1,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
-inherit user
+EAPI="7"
+inherit linux-info user
 
 DESCRIPTION="IPsec-based VPN solution, supporting IKEv1/IKEv2 and MOBIKE"
 HOMEPAGE="https://www.strongswan.org/"
@@ -36,7 +36,7 @@ COMMON_DEPEND="
 	caps? ( sys-libs/libcap )
 	curl? ( net-misc/curl )
 	ldap? ( net-nds/openldap:= )
-	openssl? ( dev-libs/openssl )
+	openssl? ( >=dev-libs/openssl-0.9.8:=[-bindist(-)] )
 	mysql? ( dev-db/mysql-connector-c:= )
 	sqlite? ( >=dev-db/sqlite-3.3.1:3 )
 	networkmanager? ( net-misc/networkmanager )
@@ -56,10 +56,54 @@ RDEPEND="${COMMON_DEPEND}
 UGID="ipsec"
 
 pkg_setup() {
+	linux-info_pkg_setup
+
+	elog "Linux kernel version: ${KV_FULL}"
+
+	if ! kernel_is -ge 2 6 16; then
+		eerror
+		eerror "This ebuild currently only supports ${PN} with the"
+		eerror "native Linux 2.6 IPsec stack on kernels >= 2.6.16."
+		eerror
+	fi
+
+	if kernel_is -lt 2 6 34; then
+		ewarn
+		ewarn "IMPORTANT KERNEL NOTES: Please read carefully..."
+		ewarn
+
+		if kernel_is -lt 2 6 29; then
+			ewarn "[ < 2.6.29 ] Due to a missing kernel feature, you have to"
+			ewarn "include all required IPv6 modules even if you just intend"
+			ewarn "to run on IPv4 only."
+			ewarn
+			ewarn "This has been fixed with kernels >= 2.6.29."
+			ewarn
+		fi
+
+		if kernel_is -lt 2 6 33; then
+			ewarn "[ < 2.6.33 ] Kernels prior to 2.6.33 include a non-standards"
+			ewarn "compliant implementation for SHA-2 HMAC support in ESP and"
+			ewarn "miss SHA384 and SHA512 HMAC support altogether."
+			ewarn
+			ewarn "If you need any of those features, please use kernel >= 2.6.33."
+			ewarn
+		fi
+
+		if kernel_is -lt 2 6 34; then
+			ewarn "[ < 2.6.34 ] Support for the AES-GMAC authentification-only"
+			ewarn "ESP cipher is only included in kernels >= 2.6.34."
+			ewarn
+			ewarn "If you need it, please use kernel >= 2.6.34."
+			ewarn
+		fi
+	fi
+
 	if use non-root; then
 		enewgroup ${UGID}
 		enewuser ${UGID} -1 -1 -1 ${UGID}
 	fi
+
 }
 
 src_configure() {
@@ -267,5 +311,3 @@ pkg_postinst() {
 	elog "  https://wiki.strongswan.org/"
 	elog
 }
-
-# vim: filetype=ebuild
