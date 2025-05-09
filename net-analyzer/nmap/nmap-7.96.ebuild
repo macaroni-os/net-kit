@@ -12,7 +12,7 @@ inherit autotools flag-o-matic lua-single python-single-r1 toolchain-funcs
 
 DESCRIPTION="Network exploration tool and security / port scanner"
 HOMEPAGE="https://nmap.org/"
-SRC_URI="https://nmap.org/dist/nmap-7.95.tar.bz2 -> nmap-7.95.tar.bz2
+SRC_URI="https://nmap.org/dist/nmap-7.96.tar.bz2 -> nmap-7.96.tar.bz2
 "
 
 LICENSE="|| ( NPSL GPL-2 )"
