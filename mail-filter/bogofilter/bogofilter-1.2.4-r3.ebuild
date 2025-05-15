@@ -27,6 +27,7 @@ RDEPEND="${DEPEND}"
 
 PATCHES=( 
 	"${FILESDIR}/${P}-test-env.patch"
+	"${FILESDIR}/bogofilter-1.2.4-db-18.1.patch"
 )
 
 src_prepare() {
