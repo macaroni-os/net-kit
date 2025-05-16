@@ -51,7 +51,6 @@ post_src_unpack() {
 
 src_configure() {
 	local mycmakeargs=(
-		-DWITH_EXAMPLES=OFF
 		-DWITH_FFMPEG=OFF
 		-DWITH_GTK=OFF
 		-DWITH_SDL=OFF
