@@ -4,7 +4,7 @@
 EAPI=7
 inherit cmake
 
-DESCRIPTION=""
+DESCRIPTION="FreeRDP is a free remote desktop protocol library and clients"
 HOMEPAGE="http://www.freerdp.com"
 SRC_URI="https://api.github.com/repos/FreeRDP/FreeRDP/tarball/3.5.1 -> freerdp-3.5.1.tar.gz"
 LICENSE="Apache-2.0"
@@ -82,6 +82,12 @@ RDEPEND="dev-libs/openssl:0=
 "
 DEPEND="${RDEPEND}
 "
+
+post_src_unpack() {
+	mv FreeRDP-FreeRDP-* ${S}
+}
+
+
 src_configure() {
 	local mycmakeargs=(
 	  -DBUILD_TESTING=OFF
@@ -113,6 +119,7 @@ src_configure() {
 	)
 	cmake_src_configure
 }
+
 
 
 # vim: filetype=ebuild
