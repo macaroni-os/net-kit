@@ -31,6 +31,7 @@ DEPEND="${COMMON_DEPEND}"
 RDEPEND="${COMMON_DEPEND}
 	!<=net-dns/bind-9.18.1-r2
 "
+S="${WORKDIR}/bind-9.21.7"
 
 # sphinx required for man-page and html creation
 BDEPEND="
