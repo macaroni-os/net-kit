@@ -8,7 +8,7 @@ inherit fcaps go-module user
 
 DESCRIPTION="A flexible DNS proxy, with support for encrypted DNS protocols"
 HOMEPAGE="https://github.com/DNSCrypt/dnscrypt-proxy"
-SRC_URI="https://api.github.com/repos/DNSCrypt/dnscrypt-proxy/tarball/2.1.11 -> dnscrypt-proxy-2.1.11.tar.gz"
+SRC_URI="https://api.github.com/repos/DNSCrypt/dnscrypt-proxy/tarball/2.1.12 -> dnscrypt-proxy-2.1.12.tar.gz"
 
 KEYWORDS="*"
 LICENSE="Apache-2.0 BSD ISC MIT MPL-2.0"
