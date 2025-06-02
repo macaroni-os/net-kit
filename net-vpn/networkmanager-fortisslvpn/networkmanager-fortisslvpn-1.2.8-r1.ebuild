@@ -37,8 +37,7 @@ DEPEND="${RDEPEND}
 src_configure() {
 	gnome2_src_configure \
 		--disable-static \
-		--with-dist-version=MacaroniOS \
+		--with-dist-version=Gentoo \
 		--localstatedir=/var \
-		$(use_with gtk gnome) \
-		--without-libnm-glib
+		$(use_with gtk gnome)
 }
