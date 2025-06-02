@@ -44,7 +44,6 @@ src_configure() {
 	gnome2_src_configure \
 		--disable-more-warnings \
 		--disable-static \
-		--with-dist-version=MacaroniOS \
-		$(use_with gtk gnome) \
-		--without-libnm-glib
+		--with-dist-version=Gentoo \
+		$(use_with gtk gnome)
 }
