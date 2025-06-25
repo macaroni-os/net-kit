@@ -52,9 +52,7 @@ src_configure() {
 		-DLWS_WITH_PEER_LIMITS=$(usex peer-limits ON OFF)
 		-DLWS_WITH_SSL=$(usex ssl ON OFF)
 		-DLWS_WITHOUT_CLIENT=$(usex !client ON OFF)
-		-DLWS_WITHOUT_TEST_CLIENT=ON
-		-DLWS_WITHOUT_TEST_SERVER=ON
-		-DLWS_WITHOUT_TESTAPPS=ON
+		-DLWS_WITHOUT_TEST_CLIENT=$(usex !client ON OFF)
 		-DLWS_WITH_CGI=$(usex cgi ON OFF)
 		-DLWS_WITH_HTTP_PROXY=$(usex http-proxy ON OFF)
 		-DLWS_WITH_ACCESS_LOG=$(usex access-log ON OFF)
