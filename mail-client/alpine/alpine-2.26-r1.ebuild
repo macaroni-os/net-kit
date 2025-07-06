@@ -13,7 +13,6 @@ KEYWORDS="*"
 IUSE="ipv6 kerberos ldap passfile nls smime ssl"
 RDEPEND="app-misc/mime-types
 	sys-libs/ncurses
-	virtual/libcrypt
 	kerberos? ( app-crypt/mit-krb5 )
 	ldap? ( net-nds/openldap )
 	ssl? ( dev-libs/openssl )
