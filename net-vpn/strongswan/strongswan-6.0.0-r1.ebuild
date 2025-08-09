@@ -5,7 +5,7 @@ inherit user
 
 DESCRIPTION="IPsec-based VPN solution, supporting IKEv1/IKEv2 and MOBIKE"
 HOMEPAGE="https://www.strongswan.org/"
-SRC_URI="https://download.strongswan.org/strongswan-6.0.0.tar.bz2 -> strongswan-6.0.0.tar.bz2"
+SRC_URI="https://download.strongswan.org/old/6.x/strongswan-6.0.0.tar.bz2 -> strongswan-6.0.0.tar.bz2"
 
 LICENSE="GPL-2 RSA DES"
 SLOT="0"
