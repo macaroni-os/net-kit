@@ -20,6 +20,7 @@ DOCS=(
 	README.md
 )
 IUSE="systemd"
+RESTRICT="network-sandbox"
 # Commons depends
 CDEPEND="sys-libs/pam
 "
@@ -42,8 +43,8 @@ pkg_setup() {
 	enewuser git -1 /bin/bash /var/lib/gitea git
 }
 src_prepare() {
-	default
 	sed -i -e "s#^MODE = console#MODE = file#" custom/conf/app.example.ini || die
+	go-module_src_prepare
 }
 src_configure() {
 	# bug 832756 - PIE build issues
@@ -53,12 +54,13 @@ src_configure() {
 src_compile() {
 	local gitea_tags
 	local -a gitea_settings makeenv
-	gitea_tags="bindata,pam,sqlite,sqlite_unlock_notify"
+	gitea_tags="bindata pam sqlite sqlite_unlock_notify"
 	gitea_settings=(
 	  "-X code.gitea.io/gitea/modules/setting.CustomConf=/etc/gitea/app.ini"
 	  "-X code.gitea.io/gitea/modules/setting.CustomPath=/var/lib/gitea/custom"
 	  "-X code.gitea.io/gitea/modules/setting.AppWorkPath=/var/lib/gitea"
 	)
+	export GITEA_VERSION="${PV}"
 	makeenv=(
 	  LDFLAGS="-extldflags \"${LDFLAGS}\" ${gitea_settings[*]}"
 	  TAGS="${gitea_tags}"
@@ -66,6 +68,7 @@ src_compile() {
 	# Use variable STORED_VERSION_FILE (the "${S}/VERSION" file) to set version,
 	# and prevent executing git command when it's not a live version.
 	makeenv+=( GITHUB_REF_NAME="" )
+	env "${makeenv[@]}" emake -j1 frontend
 	env "${makeenv[@]}" emake backend
 }
 src_install() {
