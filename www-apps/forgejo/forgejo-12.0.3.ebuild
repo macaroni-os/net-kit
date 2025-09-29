@@ -3,7 +3,6 @@
 
 EAPI=7
 EGO_BUNDLE_POSTFIX="mark-go-bundle"
-EGO_SKIP_TIDY=1
 FILECAPS=( -m 711 cap_net_bind_service+ep usr/bin/forgejo )
 inherit fcaps go-module tmpfiles systemd flag-o-matic user
 
