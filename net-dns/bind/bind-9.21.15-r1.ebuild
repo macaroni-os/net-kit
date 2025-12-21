@@ -13,7 +13,7 @@ SRC_URI="https://downloads.isc.org/isc/bind9/9.21.15/bind-9.21.15.tar.xz -> bind
 LICENSE="Apache-2.0 BSD BSD-2 GPL-2 HPND ISC MPL-2.0"
 SLOT="0"
 KEYWORDS="*"
-IUSE="dnstap dnsrps doh fixed-rrset geoip gssapi idn +jemalloc lmdb selinux urandom xml stats"
+IUSE="+caps dnstap dnsrps doh fixed-rrset geoip gssapi idn +jemalloc lmdb selinux urandom xml stats"
 
 DEPEND="
 	=net-dns/bind-tools-${PV}*
@@ -54,6 +54,7 @@ src_configure() {
 		-Ddoc=disabled
 		-Dzlib=enabled
 		$(meson_feature jemalloc)
+		$(meson_feature caps cap)
 		$(meson_feature dnstap)
 		$(meson_feature doh)
 		$(meson_feature geoip)
