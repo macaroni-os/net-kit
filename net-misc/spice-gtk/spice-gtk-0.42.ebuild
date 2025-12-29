@@ -61,7 +61,6 @@ DEPEND="${RDEPEND}
 "
 BDEPEND="
 	dev-perl/Text-CSV
-	dev-util/glib-utils
 	sys-devel/gettext
 	virtual/pkgconfig
 	$(python_gen_any_dep '
