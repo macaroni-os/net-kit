@@ -28,7 +28,6 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 BDEPEND="
 	dev-util/gdbus-codegen
-	dev-util/glib-utils
 	doc? ( dev-util/gtk-doc )
 	test? ( dev-libs/check )
 "
