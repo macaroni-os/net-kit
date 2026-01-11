@@ -3,7 +3,7 @@
 
 EAPI=7
 PYTHON_COMPAT=( python3+ )
-inherit meson python-any-r1 toolchain-funcs udev user vala
+inherit meson python-any-r1 toolchain-funcs udev user vala systemd
 
 DESCRIPTION="A set of co-operative tools that make networking simple and straightforward"
 SRC_URI="https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/archive/1.54.3/networkmanager-1.54.3.tar.bz2 -> networkmanager-1.54.3.tar.bz2"
@@ -170,12 +170,12 @@ src_configure() {
 	  -Dnbft=false
 	   -Dsession_tracking_consolekit=false
 	  $(meson_use lto b_lto)
+	  -Dsystemdsystemunitdir=$(systemd_get_systemunitdir)
 	)
 	 if use elogind; then
 	  emesonargs+=(
 	    -Dsession_tracking=elogind
 	    -Dsuspend_resume=elogind
-	    -Dsystemdsystemunitdir=false
 	    -Dsystemd_journal=false
 	  )
 	else
@@ -183,18 +183,16 @@ src_configure() {
 	    emesonargs+=(
 	      -Dsuspend_resume=systemd
 	      -Dsession_tracking=systemd
-	      -Dsystemdsystemunitdir=$(systemd_get_systemunitdir)
 	      -Dsystemd_journal=true
 	    )
 	  else
 	    emesonargs+=(
 	      -Dsession_tracking=no
-	      -Dsystemdsystemunitdir=false
 	      -Dsystemd_journal=false
 	    )
 	  fi
 	fi
-	  if use syslog; then
+	 if use syslog; then
 	  emesonargs+=( -Dconfig_logging_backend_default=syslog )
 	else
 	  emesonargs+=( -Dconfig_logging_backend_default=default )
@@ -254,6 +252,10 @@ src_install() {
 	rmdir "${ED}"/usr/share/doc/NetworkManager || die
 	 # Empty
 	rmdir "${ED}"/var{/lib{/NetworkManager,},} || die
+	 if ! use systemd ; then
+	  einfo "Removing systemd files ...
+	  rm -vrf "${ED}"/lib/systemd || die
+	fi
 }
 
 
