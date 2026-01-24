@@ -253,7 +253,7 @@ src_install() {
 	 # Empty
 	rmdir "${ED}"/var{/lib{/NetworkManager,},} || die
 	 if ! use systemd ; then
-	  einfo "Removing systemd files ...
+	  einfo "Removing systemd files ..."
 	  rm -vrf "${ED}"/lib/systemd || die
 	fi
 }
