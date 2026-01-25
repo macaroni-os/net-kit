@@ -31,7 +31,6 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
 	dev-libs/libxslt
-	dev-util/glib-utils
 	dev-util/gtk-doc-am
 	virtual/pkgconfig
 	vala? ( $(vala_depend) )
