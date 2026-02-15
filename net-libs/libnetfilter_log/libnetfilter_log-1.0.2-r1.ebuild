@@ -18,7 +18,7 @@ RDEPEND=">=net-libs/libnfnetlink-1.0.0
 	>=net-libs/libmnl-1.0.3"
 DEPEND="${RDEPEND}"
 BDEPEND="virtual/pkgconfig
-	doc? ( app-text/doxygen )"
+	doc? ( app-doc/doxygen )"
 
 CONFIG_CHECK="~NETFILTER_NETLINK_LOG"
 
