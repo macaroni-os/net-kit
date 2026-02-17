@@ -22,11 +22,11 @@ post_src_unpack() {
 
 
 src_compile() {
-	FORCE_HOST_GO=yes
+	export GITCOMMIT=80527fd389841310a728cf862491129321c8a112
+	unset LDFLAGS
 	echo "$(go env GOVERSION | sed 's/go//g')" > .go-version
 	emake
 }
-
 src_install() {
 	dobin ${PN}
 	insinto /etc/"${PN}"
