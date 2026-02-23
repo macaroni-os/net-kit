@@ -88,7 +88,6 @@ DEPEND="${COMMON_DEPEND}
 "
 BDEPEND="
 	dev-util/gdbus-codegen
-	dev-util/glib-utils
 	gtk-doc? (
 		dev-util/gtk-doc
 		app-text/docbook-xml-dtd:4.1.2
