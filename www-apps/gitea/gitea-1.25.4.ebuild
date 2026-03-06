@@ -31,6 +31,7 @@ RDEPEND="${CDEPEND}
 	
 "
 DEPEND="${CDEPEND}
+	dev-util/pnpm-bin
 "
 
 post_src_unpack() {
