@@ -70,6 +70,8 @@ src_configure() {
 	# Used by tests if userpriv is disabled
 	addwrite /run/netns
 
+	sed -i -e "s|^#include <string.h>|#include <string.h>\n#include <stdlib.h>|g"  openconnect-internal.h || die
+
 	local myconf=(
 		--disable-dsa-tests
 		$(use_enable nls)
