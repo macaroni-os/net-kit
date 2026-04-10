@@ -17,6 +17,7 @@ IUSE="gssapi idn ipv6 libedit readline xml"
 COMMON_DEPEND="
 	dev-libs/libuv:=
 	dev-libs/openssl
+	dev-db/lmdb
 	dev-libs/userspace-rcu
 	sys-libs/libcap
 	xml? ( dev-libs/libxml2 )
