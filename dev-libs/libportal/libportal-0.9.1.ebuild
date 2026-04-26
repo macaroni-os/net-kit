@@ -17,7 +17,6 @@ vala? ( introspection )
 BDEPEND="virtual/pkgconfig
 	gtk-doc? ( dev-util/gi-docgen )
 	vala? ( $(vala_depend) )
-	
 "
 RDEPEND="dev-libs/glib:2
 	introspection? ( dev-libs/gobject-introspection:= )
@@ -40,6 +39,11 @@ post_src_unpack() {
 src_prepare() {
 	default
 	vala_src_prepare
+	# Fix qt6 compilation
+	sed -i \
+	-e 's|^#include <private/qgenericunixservices_p.h>|#include <private/qdesktopunixservices_p.h>|g' \
+	-e 's|QGenericUnixServices|QDesktopUnixServices|g' \
+	libportal/portal-qt6.cpp
 }
 src_configure() {
 	local emesonargs=(
