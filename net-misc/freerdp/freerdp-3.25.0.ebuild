@@ -2,6 +2,7 @@
 # Autogen by MARK Devkit
 
 EAPI=7
+CMAKE_BUILD_TYPE=Release
 inherit cmake
 
 DESCRIPTION="FreeRDP is a free remote desktop protocol library and clients"
