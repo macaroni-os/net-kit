@@ -57,6 +57,7 @@ RDEPEND="dev-libs/openssl:0=
 	sdl? (
 	  media-libs/libsdl2
 	  media-libs/sdl2-ttf
+	  media-libs/sdl3-ttf
 	)
 	server? (
 	  X? (
