@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 # the last time.
 SLOT="0/1.8.3"
 KEYWORDS="*"
-IUSE="conntrack ipv6 netlink nftables pcap static-libs"
+IUSE="conntrack ipv6 netlink +nftables pcap static-libs"
 
 COMMON_DEPEND="
 	conntrack? ( >=net-libs/libnetfilter_conntrack-1.0.6 )
@@ -110,8 +110,22 @@ src_install() {
 		# Bug 647458
 		rm "${ED}"/etc/ethertypes || die
 
-		# Bug 660886 and  Bug 669894
+		# Bug 660886 and Bug 669894
 		rm "${ED}"/sbin/{arptables,ebtables}{,-{save,restore}} || die
+
+		rm -f "${ED}"/sbin/iptables
+		rm -f "${ED}"/sbin/ip6tables
+		rm -f "${ED}"/sbin/iptables-save
+		rm -f "${ED}"/sbin/iptables-restore
+		rm -f "${ED}"/sbin/ip6tables-save
+		rm -f "${ED}"/sbin/ip6tables-restore
+
+		dosym xtables-nft-multi /sbin/iptables
+		dosym xtables-nft-multi /sbin/ip6tables
+		dosym xtables-nft-multi /sbin/iptables-save
+		dosym xtables-nft-multi /sbin/iptables-restore
+		dosym xtables-nft-multi /sbin/ip6tables-save
+		dosym xtables-nft-multi /sbin/ip6tables-restore
 	fi
 
 	find "${ED}" -type f -name "*.la" -delete || die
