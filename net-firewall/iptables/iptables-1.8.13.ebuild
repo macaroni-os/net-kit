@@ -89,7 +89,6 @@ src_install() {
 	rm -f "${ED}"/sbin/iptables-restore
 	rm -f "${ED}"/sbin/ip6tables-save
 	rm -f "${ED}"/sbin/ip6tables-restore
-	rm "${ED}"/etc/ethertypes || die
 	rm "${ED}"/etc/ethertypes || ewarn "File /etc/ethertypes not present. Ignoring."
 	rm "${ED}"/sbin/{arptables,ebtables}{,-{save,restore}} || ewarn "Some legacy arptables/ebtables files were not present. Ignoring."
 	 if use nftables; then
