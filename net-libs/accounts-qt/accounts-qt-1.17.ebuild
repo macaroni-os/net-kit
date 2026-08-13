@@ -25,7 +25,13 @@ RDEPEND=">=net-libs/libaccounts-glib-1.23
 	dev-qt/qtbase:6
 	
 "
+DEPEND="${RDEPEND}
+"
 S="${WORKDIR}/libaccounts-qt-VERSION_1.17"
+src_unpack() {
+	default
+	mv ${WORKDIR}/libaccounts-qt-* "${S}"
+}
 _get_qt6_qmake() {
 	  echo "${EPREFIX}/usr/$(get_libdir)/qt6/bin/qmake"
 }
