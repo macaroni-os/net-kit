@@ -80,7 +80,7 @@ src_configure() {
 	      QMAKE_LFLAGS_RELEASE= \
 	      QMAKE_LFLAGS_DEBUG= \
 	      PREFIX="${EPREFIX}"/usr \
-	      LIBDIR=$(get_libdir) \
+		  LIBDIR="/usr/$(get_libdir)" \
 	      || die "qmake failed"
 }
 src_install() {
