@@ -25,9 +25,6 @@ post_src_unpack() {
 src_prepare() {
 	default
 	sed -i "s|@LIBDIR@|$(get_libdir)|g" src/signon-oauth2plugin.pc || die
-	sed -i -e \
-	  "s|TEMPLATE|INCLUDEPATH += /usr/include/signon-qt6 /usr/include/signon-qt6/SignOn\nTEMPLATE|g" \
-	   signon-oauth2.pro
 }
 src_configure() {
 	local mycmakeargs=( LIBDIR=/usr/$(get_libdir) )
