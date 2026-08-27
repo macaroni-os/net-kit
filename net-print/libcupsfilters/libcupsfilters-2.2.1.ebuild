@@ -12,6 +12,8 @@ SLOT="0"
 KEYWORDS="*"
 IUSE="dbus exif jpeg +poppler +postscript png tiff"
 BDEPEND=">=sys-devel/gettext-0.18.3
+	media-libs/libjxl
+	dev-libs/pdfio
 	virtual/pkgconfig
 	
 "
@@ -33,25 +35,27 @@ DEPEND="${RDEPEND}
 "
 src_prepare() {
 	default
-	 # respect --as-needed
+
+	# respect --as-needed
 	elibtoolize
 }
 
 src_configure() {
 	local myeconfargs=(
-	  --enable-imagefilters
-	  --localstatedir="${EPREFIX}"/var
-	  --with-cups-rundir="${EPREFIX}"/run/cups
-	  --disable-mutool
-	  $(use_enable exif)
-	  $(use_enable dbus)
-	  $(use_enable poppler)
-	  $(use_enable postscript ghostscript)
-	  $(use_with jpeg)
-	  $(use_with png)
-	  $(use_with tiff)
+		--enable-imagefilters
+		--localstatedir="${EPREFIX}"/var
+		--with-cups-rundir="${EPREFIX}"/run/cups
+		--disable-mutool
+		$(use_enable exif)
+		$(use_enable dbus)
+		$(use_enable poppler)
+		$(use_enable postscript ghostscript)
+		$(use_with jpeg)
+		$(use_with png)
+		$(use_with tiff)
 	)
-	 econf "${myeconfargs[@]}"
+
+	econf "${myeconfargs[@]}"
 }
 
 src_install() {
