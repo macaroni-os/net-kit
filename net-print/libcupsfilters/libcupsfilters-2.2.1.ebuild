@@ -12,8 +12,6 @@ SLOT="0"
 KEYWORDS="*"
 IUSE="dbus exif jpeg +poppler +postscript png tiff"
 BDEPEND=">=sys-devel/gettext-0.18.3
-	media-libs/libjxl
-	dev-libs/pdfio
 	virtual/pkgconfig
 	
 "
@@ -29,6 +27,8 @@ RDEPEND=">=app-text/qpdf-8.3.0:=
 	poppler? ( >=app-text/poppler-0.32:=[cxx] )
 	png? ( media-libs/libpng:= )
 	tiff? ( media-libs/tiff:= )
+	media-libs/libjxl
+	dev-libs/pdfio
 	
 "
 DEPEND="${RDEPEND}
