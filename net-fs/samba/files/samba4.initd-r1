@@ -3,6 +3,7 @@
 
 extra_started_commands="reload"
 [ -z "${piddir}" ] && piddir="/run/samba"
+[ -d "${piddir}" ] || mkdir -p "${piddir}"
 
 depend() {
 	after slapd
@@ -33,7 +34,10 @@ signal_do() {
 }
 
 start() {
+	mkdir -p /run/samba
 	${my_service_PRE}
+
+	mkdir -p ${piddir}
 	[ -d "${piddir}" ] || mkdir -p "${piddir}"
 	signal_do start && return 0
 
