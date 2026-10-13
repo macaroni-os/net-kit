@@ -19,7 +19,7 @@ PATCHES=(
 	"${FILESDIR}/ntp-4.2.8_p18-r2-bind-fail-NULL-dereference.patch"
 	"${FILESDIR}/ntp-4.2.8-configure.patch"
 )
-IUSE="caps debug ipv6 ntp-cron parse-clocks readline samba snmp ssl +threads vim-syntax zeroconf"
+IUSE="caps debug ipv6 ntp-cron parse-clocks readline samba systemd snmp ssl +threads vim-syntax zeroconf"
 # Commons depends
 CDEPEND="readline? ( sys-libs/readline:= )
 	dev-libs/libevent:=[threads?]
@@ -109,7 +109,6 @@ src_install() {
 	if ! use caps ; then
 		sed -i "s|-u ntp:ntp||" "${ED}"/etc/conf.d/ntpd || die
 	fi
-	sed -i "s:/usr/bin:/usr/sbin:" "${ED}"/etc/init.d/ntpd || die
 
 	keepdir /var/lib/ntp
 	use prefix || fowners ntp:ntp /var/lib/ntp
@@ -138,6 +137,7 @@ src_install() {
 		newinitd "${FILESDIR}"/ntpd.rc-r1 ntpd
 		newinitd "${FILESDIR}"/sntp.rc sntp
 		newinitd "${FILESDIR}"/ntp-client.rc ntp-client
+		sed -i "s:/usr/bin:/usr/sbin:" "${ED}"/etc/init.d/ntpd || die
 	fi
 
 }
