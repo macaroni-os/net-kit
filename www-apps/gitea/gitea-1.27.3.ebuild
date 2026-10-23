@@ -15,7 +15,6 @@ SLOT="0"
 KEYWORDS="*"
 DOCS=(
 	custom/conf/app.example.ini
-	CHANGELOG.md
 	CONTRIBUTING.md
 	README.md
 )
@@ -70,6 +69,9 @@ src_compile() {
 	# Use variable STORED_VERSION_FILE (the "${S}/VERSION" file) to set version,
 	# and prevent executing git command when it's not a live version.
 	makeenv+=( GITHUB_REF_NAME="" )
+	# Ensure using of store directory for pnpm inside WORKDIR
+	export PNPM_HOME=${WORKDIR}/pnpm-store
+
 	env "${makeenv[@]}" emake -j1 frontend
 	env "${makeenv[@]}" emake backend
 }
