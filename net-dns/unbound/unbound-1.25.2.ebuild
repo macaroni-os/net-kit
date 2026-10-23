@@ -40,9 +40,10 @@ RDEPEND="${CDEPEND}
 "
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-1.5.7-trust-anchor-file.patch
-	"${FILESDIR}"/${PN}-1.6.3-pkg-config.patch
-	"${FILESDIR}"/${PN}-1.10.1-find-ar.patch
+	"${FILESDIR}/unbound-1.5.7-trust-anchor-file.patch"
+	"${FILESDIR}/unbound-1.6.3-pkg-config.patch"
+	"${FILESDIR}/unbound-1.10.1-find-ar.patch"
+	"${FILESDIR}/unbound-swig-4.5.patch"
 )
 
 S=${WORKDIR}/${MY_P}
