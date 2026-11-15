@@ -34,7 +34,7 @@ depend() {
 
 run_ovn_ctl() {
 	set /usr/share/ovn/scripts/ovn-ctl ${1-start_ic_ovsdb}
-	set "$@" $OVN_IC_OPTS
+	set "$@" $OVN_IC_DB_OPTS
 	"$@"
 	return $?
 }
