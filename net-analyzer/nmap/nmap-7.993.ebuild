@@ -20,7 +20,7 @@ IUSE="ipv6 libssh2 ncat nping +nse ssl +system-lua"
 REQUIRED_USE="system-lua? ( nse ${LUA_REQUIRED_USE} )
 "
 RDEPEND="dev-libs/liblinear:=
-	dev-libs/libpcre
+	dev-libs/libpcre2:=
 	net-libs/libpcap
 	libssh2? (
 	  net-libs/libssh2[zlib]
@@ -70,7 +70,6 @@ src_configure() {
 		$(usex nse --with-zlib) \
 		--cache-file="${S}"/config.cache \
 		--with-libdnet=included \
-		--with-pcre=/usr \
 		--without-ndiff \
 		--without-zenmap
 }
